@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta name="description" content="" />
+      <title> ArtistRoom | Play and win </title>
+      <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+      <link href="css/styles.css" rel="stylesheet" />
+      <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+      <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+   </head>
+   
+   <body id="page-top">
+      <!-- Navigation-->
+      <nav class="navbar navbar-expand navbar-dark fixed-top" id="mainNav">
+         <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img class="logoimage" src="assets/img/logo.png" /></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars ml-1"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+               <ul class="navbar-nav text-uppercase ml-auto">
+                  <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#page-top" style="font-family: 'Gotu', sans-serif;"> Home </a></li>
+                  <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#aboutus" style="font-family: 'Gotu', sans-serif;"> About Us </a></li>
+                  <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#upcomingMatches" style="font-family: 'Gotu', sans-serif;"> Upcoming Matches </a></li>
+                  <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#howtoplay" style="font-family: 'Gotu', sans-serif;"> How to play </a></li> 
+                  <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact" style="font-family: 'Gotu', sans-serif;"> Contact </a></li> -->
+                  <li class="nav-item"><a class="nav-link js-scroll-trigger" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id="auth" style="font-family: 'Gotu', sans-serif;"> Sign In </a></li>
+                  <li class="nav-item"><a class="nav-link js-scroll-trigger" style="width:auto;" id="logout" style="font-family: 'Gotu', sans-serif;"> Log Out </a></li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      
+      <!-- Masthead-->
+      <header class="masthead">
+         <div class="container">
+            <div class="masthead-subheading" style="font-family: 'Acme', sans-serif;">
+               India's Biggest Platform for  Artists
+            </div>
+         <!--    <div class="masthead-heading">India's Biggest Platform for the Artist to earn and showcase there work and build Fan following</div> -->
+            <a class="btn btn-primary text-uppercase js-scroll-trigger" onclick="document.getElementById('id01').style.display='block'" style="color: black;font-family: 'Gotu', sans-serif;"><b> Play Now </b></a><br><br>
+            <a class="text-uppercase js-scroll-trigger" onclick="document.getElementById('id02').style.display='block'" style="color: blanchedalmond; font-family: 'Gotu', sans-serif; font-size: 12px; cursor: pointer;"><b> Create account </b></a>
+         </div>
+      </header>
+      
+      <!-- Services-->
+      <section class="page-section" id="upcomingMatches">
+         <div class="text-center">
+            <h2 class="section-heading text-uppercase" style="font-family: 'Yatra One', cursive;"> Upcoming Matches </h2>         
+         </div>
+         <div class="container-fluid">
+            <!-- Classic tabs -->
+            <div class="classic-tabs">
+               <ul class="nav tabs-cyan" id="myClassicTab" role="tablist">
+                  <li class="nav-item">
+                     <a class="nav-link  waves-light active show" id="profile-tab-classic" data-toggle="tab" href="#profile-classic"
+                     role="tab" aria-controls="profile-classic" aria-selected="true" style="font-family: 'Gotu', sans-serif;"> Photgraphy </a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link waves-light" id="follow-tab-classic" data-toggle="tab" href="#follow-classic" role="tab"
+                     aria-controls="follow-classic" aria-selected="false" style="font-family: 'Gotu', sans-serif;"> Short Video </a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link waves-light" id="contact-tab-classic" data-toggle="tab" href="#contact-classic" role="tab"
+                     aria-controls="contact-classic" aria-selected="false" style="font-family: 'Gotu', sans-serif;"> Sketching </a>
+                  </li>
+               </ul>
+
+               <div class="tab-content border-right border-bottom border-left rounded-bottom" id="myClassicTabContent">
+                     <div class="tab-pane fade active show" id="profile-classic" role="tabpanel" aria-labelledby="profile-tab-classic">
+                        <div class="row thumbnails">
+                           <div class="card col-md-4" style="width: 18rem; height: 60%;">
+                           <img class="card-img-top" src="assets/img/about/camera.jpg" alt="Card image cap">
+                           <div class="card-body">
+                              <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"> Contest Date: 01 Aug 2020 </h5>
+                           </div>
+                           </div>
+                           <div class="card col-md-4" style="width: 18rem; height: 60%;">
+                           <img class="card-img-top" src="assets/img/about/camera.jpg" alt="Card image cap">
+                           <div class="card-body">
+                              <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"> Contest Date: 03 Aug 2020 </h5>
+                           </div>
+                           </div>
+                           <div class="card col-md-4" style="width: 18rem; height: 60%;">
+                           <img class="card-img-top" src="assets/img/about/camera.jpg" alt="Card image cap">
+                           <div class="card-body">
+                              <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"> Contest Date: 05 Aug 2020 </h5>
+                           </div>
+                           </div>
+                           <div class="card col-md-4" style="width: 18rem; height: 60%;">
+                           <img class="card-img-top" src="assets/img/about/camera.jpg" alt="Card image cap">
+                           <div class="card-body">
+                              <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"> Contest Date: 07 Aug 2020 </h5>
+                           </div>
+                           </div>
+                           <div class="card col-md-4" style="width: 18rem; height: 60%;">
+                           <img class="card-img-top" src="assets/img/about/camera.jpg" alt="Card image cap">
+                           <div class="card-body">
+                              <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"> Contest Date: 09 Aug 2020 </h5>
+                           </div>
+                           </div>
+                           <div class="card col-md-4" style="width: 18rem; height: 60%;">
+                           <img class="card-img-top" src="assets/img/about/camera.jpg" alt="Card image cap">
+                           <div class="card-body">
+                              <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"> Contest Date: 11 Aug 2020 </h5>
+                           </div>
+                           </div>
+                        </div>
+                     </div>
+                  
+                     <div class="tab-pane fade" id="follow-classic" role="tabpanel" aria-labelledby="follow-tab-classic">
+                        <div class="row thumbnails">
+                           <div class="card col-md-4" style="width: 18rem; height: 60%;">
+                              <img class="card-img-top" src="assets/img/about/short_video.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                 <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"> Contest Date: 13 Aug 2020 </h5>
+                              </div>
+                           </div>
+                           <div class="card col-md-4" style="width: 18rem; height: 60%;">
+                              <img class="card-img-top" src="assets/img/about/short_video.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                 <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"> Contest Date: 15 Aug 2020 </h5>
+                              </div>
+                           </div>
+                           <div class="card col-md-4" style="width: 18rem; height: 60%;">
+                              <img class="card-img-top" src="assets/img/about/short_video.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                 <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"> Contest Date: 17 Aug 2020 </h5>
+                              </div>
+                           </div>
+                           <div class="card col-md-4" style="width: 18rem; height: 60%;">
+                              <img class="card-img-top" src="assets/img/about/short_video.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                 <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"> Contest Date: 19 Aug 2020 </h5>
+                              </div>
+                           </div>
+                           <div class="card col-md-4" style="width: 18rem; height: 60%;">
+                              <img class="card-img-top" src="assets/img/about/short_video.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                 <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"> Contest Date: 21 Aug 2020 </h5>
+                              </div>
+                           </div>
+                           <div class="card col-md-4" style="width: 18rem; height: 60%;">
+                              <img class="card-img-top" src="assets/img/about/short_video.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                 <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"> Contest Date: 23 Aug 2020 </h5>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="tab-pane fade" id="contact-classic" role="tabpanel" aria-labelledby="contact-tab-classic">
+                        <div class="row thumbnails">
+                           <div class="card col-md-4" style="width: 18rem; height: 60%;">
+                              <img class="card-img-top" src="assets/img/about/sketching.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                 <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"> Contest Date: 25 Aug 2020 </h5>
+                              </div>
+                           </div>
+                           <div class="card col-md-4" style="width: 18rem; height: 60%;">
+                              <img class="card-img-top" src="assets/img/about/sketching.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                 <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"> Contest Date: 27 Aug 2020 </h5>
+                              </div>
+                           </div>
+                           <div class="card col-md-4" style="width: 18rem; height: 60%;">
+                              <img class="card-img-top" src="assets/img/about/sketching.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                 <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"> Contest Date: 29 Aug 2020 </h5>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="">
+                        <div class="load_more_button">
+                           <a target="_top" href="" style="font-family: 'Gotu', sans-serif;">MORE MATCHES</a>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-6 load_more_button" style="align-items: flex-start;">
+                           <a target="_top" href="" style="font-family: 'Gotu', sans-serif;"> Daily Contests </a>
+                        </div>
+                        <div class="col-md-6 load_more_button" style="align-items: flex-end;">
+                           <a target="_top" href="" style="font-family: 'Gotu', sans-serif;"> Multiple Contests </a>
+                        </div>
+                     </div>
+               </div>
+            </div>
+            <!-- Classic tabs -->     
+         </div>
+      </section>
+    
+      <section class="gapimages" style="height: 750px;">
+      </section>
+
+      <div id="id01" class="modal" style="padding: 20px;">
+         <form class="modal-content animate" id="signin">
+           <div class="imgcontainer">
+             <span onclick="document.getElementById('id01').style.display='none';document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+             <!-- <img src="assets/img/logo.png" alt="Avatar" class="avatar"> -->
+           </div>
+       
+           <div class="container">
+             <label for="uname" style="font-family: 'Gotu', sans-serif;"><b>Username</b></label>
+             <input type="text" id="login-email" placeholder="Enter Username" name="uname" required style="font-family: 'Gotu', sans-serif;">
+       
+             <label for="psw" style="font-family: 'Gotu', sans-serif;"><b>Password</b></label>
+             <input type="password" id="login-password" placeholder="Enter Password" name="psw" required style="font-family: 'Gotu', sans-serif;">
+               
+             <button type="submit" style="font-family: 'Gotu', sans-serif;">Log In</button>
+           </div>
+       
+           <div class="container" style="background-color:#f1f1f1">
+             <button type="button" style="font-family: 'Gotu', sans-serif;" onclick="document.getElementById('id01').style.display='none'; document.getElementById('id02').style.display='block'" class="cancelbtn"> Create Account </button>
+             <span class="psw" style="font-family: 'Gotu', sans-serif;">Forgot <a href="#">password?</a></span>
+           </div>
+         </form>
+      </div>
+      
+      <div id="id02" class="modal" style="padding: 20px;">
+         <form class="modal-content animate" id="signup">
+           <div class="imgcontainer">
+             <span onclick="document.getElementById('id01').style.display='none'; document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+             <!-- <img src="assets/img/logo.png" alt="Avatar" class="avatar"> -->
+           </div>
+       
+           <div class="container">
+             <label for="uname" style="font-family: 'Gotu', sans-serif;"><b>Username</b></label>
+             <input type="text" id="email" placeholder="Enter Username" name="uname" required style="font-family: 'Gotu', sans-serif;">
+       
+             <label for="psw" style="font-family: 'Gotu', sans-serif;"><b>Password</b></label>
+             <input type="password" id="password" placeholder="Enter Password" name="psw" required style="font-family: 'Gotu', sans-serif;">
+               
+             <button type="submit" style="font-family: 'Gotu', sans-serif;"> Create </button>
+           </div>
+       
+           <div class="container" style="background-color:#f1f1f1">
+             <button type="button" onclick="document.getElementById('id02').style.display='none'; document.getElementById('id01').style.display='block'" class="cancelbtn" style="font-family: 'Gotu', sans-serif;"> Already a user? </button>
+             <span class="psw" style="font-family: 'Gotu', sans-serif;">Forgot <a href="#">password?</a></span>
+           </div>
+         </form>
+      </div>
+      
+
+      <!-- Portfolio Grid-->
+      <section class="page-section bg-light" id="howtoplay">
+         <div class="container">
+            <div class="text-center">
+               <h2 class="section-heading text-uppercase" style="font-family: 'Yatra One', cursive;"> How To Play </h2>
+               <h3 class="section-subheading text-muted" style="font-family: 'Gotu', sans-serif;"> Check Out the Video for details and instruction </h3>
+            </div>
+            <div class="row">
+               <div class="col-sm-8">
+                  <iframe style="width: 100%;height: 400px;" src="https://www.youtube.com/embed/ineZXLbL7s8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               </div>
+               <div class="col-sm-4">
+                  <div class="stepshowtoplay">
+                     <h3 class="pointshead" style="font-family: 'Gotu', sans-serif; color: black;"> Select The Contest </h3>
+                     <div style="font-family: 'Gotu', sans-serif;"> Select an upcoming match of your choice. </div>
+                  </div>
+                  <div class="stepshowtoplay">
+                     <h3 class="pointshead" style="font-family: 'Gotu', sans-serif; color: black;"> Fill out the details </h3>
+                     <div style="font-family: 'Gotu', sans-serif;"> Provide all the required details to participate. </div>
+                  </div>
+                  <div class="stepshowtoplay">
+                     <h3 class="pointshead" style="font-family: 'Gotu', sans-serif; color: black;"> Join free/cash contests </h3>
+                     <div style="font-family: 'Gotu', sans-serif;"> Bingo! You are good to go in free and cash winning contests. </div>
+                  </div>
+               </div>
+            </div>
+            
+         <div class="text-center" style="color: blanchedalmond;">
+            <h2 class="section-heading text-uppercase" style="font-family: 'Yatra One', cursive; padding-top: 20px;"> Exclusive Offers </h2>         
+         </div>
+         <div class="col-md-12" style="color: black; text-align: left; padding: 50px; font-family: 'Gotu', sans-serif; font-size: 20px;">
+            <p><i class="fa fa-star" aria-hidden="true"></i>   Create an account and get ₹ 100 bonus cash </p>
+            <p><i class="fa fa-star" aria-hidden="true"></i>   Build your own fan following, follow people and see what they share right in your feed</p>
+            <p><i class="fa fa-star" aria-hidden="true"></i>   Play more level-UP and get exciting rewards</p>
+         </div>
+         </div>
+      </section>
+
+      <!-- About-->
+      <section class="page-section" id="aboutus">
+         <div class="container">
+            <div class="text-center">
+               <h2 class="section-heading text-uppercase" style="font-family: 'Yatra One', cursive;"> About Us </h2>              
+            </div>
+            <div class="col-md-12" style="text-align: center; justify-content: center; font-family: 'Gotu', sans-serif;">
+               <p style="padding: 20px;"> <b>
+               According to our survey in 2018 many of the hidden talented artists are not getting appreciated for their
+               work we experience same with us then we fellup on a idea to create a website for talented artists in our
+               india to showcase their work and earn money by playing exiting contests.This will help many of the
+               youth which are not getting platform to showcase their work our Website offers them platform they
+               need.Artist room is India’s biggest platform for artists to earn money showcase their talent and build a
+               gaan following.</b>
+               </p>
+            </div>
+            <ul class="timeline">
+               <li>
+                  <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/Photography.svg" alt="" /></div>
+                  <div class="timeline-panel">
+                     <div class="timeline-heading">  
+                        <h4 class="subheading" style="font-family: 'Gotu', sans-serif;"> Photography </h4>
+                     </div>
+                     <div class="timeline-body">
+                        <p class="text-muted" style="font-family: 'Gotu', sans-serif;"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur! </p>
+                     </div>
+                  </div>
+               </li>
+               <li class="timeline-inverted">
+                  <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/Short_video.svg" alt="" /></div>
+                  <div class="timeline-panel">
+                     <div class="timeline-heading">
+                        <h4 class="subheading" style="font-family: 'Gotu', sans-serif;"> Short Video </h4>
+                     </div>
+                     <div class="timeline-body">
+                        <p class="text-muted" style="font-family: 'Gotu', sans-serif;"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur! </p>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/Sketch.svg" alt="" /></div>
+                  <div class="timeline-panel">
+                     <div class="timeline-heading">  
+                        <h4 class="subheading" style="font-family: 'Gotu', sans-serif;"> Sketching </h4>
+                     </div>
+                     <div class="timeline-body">
+                        <p class="text-muted" style="font-family: 'Gotu', sans-serif;"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur! </p>
+                     </div>
+                  </div>
+               </li>           
+            </ul>
+         </div>
+      </section>
+      
+      <!-- Contact-->
+      <section class="page-section" id="contact">
+         <div class="container">
+            <div class="text-center">
+               <!-- <div class="tab-pane fade" id="contact-classic" role="tabpanel" aria-labelledby="contact-tab-classic">
+                  <div class="row thumbnails">
+                     <div class="col-md-6">
+                        <img class="logoimage" src="assets/img/logo.png" />
+                        <h3 class="section-subheading text-muted" style="font-family: 'Gotu', sans-serif; color: white; font-weight: 400;"><b><a class="btn btn-social mx-2" href="#!" style="background-color: yellow;"><i class="fab fa-twitter"></i></a><a class="btn btn-social mx-2" href="#!" style="background-color: yellow;"><i class="fab fa-facebook-f"></i></a><a class="btn btn-social mx-2" href="#!" style="background-color: yellow;"><i class="fab fa-linkedin-in"></i></a></b></h3>
+                     </div>
+                     <div class="col-md-3">
+                       
+                     </div>
+                     <div class="col-md-3">
+                        
+                     </div>
+                  </div>
+               </div> -->
+               <!-- <h2 class="section-heading text-uppercase" style="font-family: 'Yatra One', cursive;"> Contact Us </h2> -->
+               <div class="row">
+                  <div class="col-md-6">
+                     <img class="logoimage" src="assets/img/logo.png"  style="height: 70px; padding: 15px;"/><br>
+                     <!-- <h3 class="section-subheading text-muted" style="font-family: 'Gotu', sans-serif; color: white; font-weight: 400;"><b> For any query feel free to reach us at : <a href="mailto:askartistroom@gmail.com?"> askartistroom@gmail.com </a></b></h3> -->
+                     <div style="display: inline-block; padding: 25px;">
+                        <a class="btn btn-social mx-2" href="https://twitter.com/ArtistRoom2" style="background-color: yellow;"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-social mx-2" href="https://www.instagram.com/artistroom11/" style="background-color: yellow;"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-social mx-2" href="https://t.me/Officialartistroom" style="background-color: yellow;"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-social mx-2" href="https://m.facebook.com/Artist-Room-115761216843685/" style="background-color: yellow;"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-social mx-2" href="https://www.linkedin.com/in/artist-room-0976811b0" style="background-color: yellow;"><i class="fab fa-linkedin-in"></i></a>
+                     </div>
+                     <!-- <h3 class="section-subheading text-muted" style="font-family: 'Gotu', sans-serif; color: white; font-weight: 400;"><b><a class="btn btn-social mx-2" href="https://twitter.com/ArtistRoom2" style="background-color: yellow;"><i class="fab fa-twitter"></i></a><a class="btn btn-social mx-2" href="https://www.instagram.com/artistroom11/" style="background-color: yellow;"><i class="fab fa-instagram"></i></a><a class="btn btn-social mx-2" href="https://t.me/Officialartistroom" style="background-color: yellow;"><i class="fab fa-telegram"></i></a><a class="btn btn-social mx-2" href="https://m.facebook.com/Artist-Room-115761216843685/" style="background-color: yellow;"><i class="fab fa-facebook-f"></i></a><a class="btn btn-social mx-2" href="https://www.linkedin.com/in/artist-room-0976811b0" style="background-color: yellow;"><i class="fab fa-linkedin-in"></i></a></b></h3> -->
+                  </div>
+                  <div class="col-md-3" id="low">
+                     <!-- <h3 class="section-subheading text-muted" style="font-family: 'Gotu', sans-serif; color: white; font-weight: 400;"><b>  Design & Developed By : Kumar Satyanshu <br> <br> &copy; Copyright 2020 - <a href="https://avtechtechnologies.in"> A V Technologies </a> </b></h3> -->
+                     <a class="js-scroll-trigger" href="#page-top" style="font-family: 'Gotu', sans-serif; font-size: 20px; text-decoration: none;"> Home </a></li><br><br>
+                     <a class="js-scroll-trigger" href="#aboutus" style="font-family: 'Gotu', sans-serif;font-size: 20px; text-decoration: none;"> About Us </a></li><br><br>
+                     <a class="js-scroll-trigger" href="#upcomingMatches" style="font-family: 'Gotu', sans-serif;font-size: 20px; text-decoration: none;"> Upcoming Matches </a></li><br><br>
+                     <a class="js-scroll-trigger" href="#howtoplay" style="font-family: 'Gotu', sans-serif;font-size: 20px; text-decoration: none;"> How to play </a></li> <br><br>
+                     <!-- <a class="js-scroll-trigger" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id="auth" style="font-family: 'Gotu', sans-serif;font-size: 25px;"> Sign In </a></li><br>
+                     <a class="js-scroll-trigger" style="width:auto;" id="logout" style="font-family: 'Gotu', sans-serif;font-size: 25px;"> Log Out </a></li><br> -->
+                  </div>
+                  <div class="col-md-3" id="low">
+                     <a class="js-scroll-trigger" href="#" style="font-family: 'Gotu', sans-serif;font-size: 20px; text-decoration: none;"> Invite Friends </a></li> <br><br>
+                     <a class="js-scroll-trigger" href="#" style="font-family: 'Gotu', sans-serif;font-size: 20px; text-decoration: none;"> Helpdesk </a></li> <br><br>
+                     <a class="js-scroll-trigger" href="#" style="font-family: 'Gotu', sans-serif;font-size: 20px; text-decoration: none;"> Fairplay </a></li> <br><br>
+                     <a class="js-scroll-trigger" href="#contact" style="font-family: 'Gotu', sans-serif;font-size: 20px; text-decoration: none;"> Contact </a></li><br><br>
+                  </div>
+               </div><br><br>
+               <div class="row">
+                  <div class="col-md-12">
+                     <h3 class="section-subheading text-muted" style="font-family: 'Gotu', sans-serif; color: antiquewhite;; font-weight: 400; "><b>  Design & Developed By : Kumar Satyanshu <br> <br> &copy; Copyright 2020 - <a href="https://avtechtechnologies.in"> A V Technologies </a> </b></h3>
+                  </div>
+               </div>
+               <div class="row" id="lows">
+                  <div class="col-md-6">
+                     <h3 style="font-family: 'Gotu', sans-serif; color: antiquewhite;"><a href="" style="text-decoration: none; font-size: medium;"> Privacy Policy </a></h3>
+                  </div>
+                  <div class="col-md-6">
+                     <h3 style="font-family: 'Gotu', sans-serif; color: antiquewhite;"><a href="" style="text-decoration: none; font-size: medium;"> Terms & Condition </a></h3>
+                  </div>
+               </div>
+            </div>  
+         </div>
+      </section>
+       
+      
+      <!-- Footer-->
+      <!-- <footer class="footer py-4">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-lg-4 text-lg-left" style="font-family: 'Yatra One', cursive;"></div>
+               <div class="col-lg-4 my-3 my-lg-0">
+                  <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a><a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a><a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+               </div>
+               <div class="col-lg-4 text-lg-right"><a class="mr-3" href="#!">Privacy Policy</a><a href="#!">Terms of Use</a></div>
+            </div>
+         </div>
+      </footer> -->
+      
+      <!-- Portfolio Modals--><!-- Modal 1-->
+      <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+               <div class="container">
+                  <div class="row justify-content-center">
+                     <div class="col-lg-8">
+                        <div class="modal-body">
+                           <!-- Project Details Go Here-->
+                           <h2 class="text-uppercase">Project Name</h2>
+                           <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                           <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/01-full.jpg" alt="" />
+                           <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                           <ul class="list-inline">
+                              <li>Date: January 2020</li>
+                              <li>Client: Threads</li>
+                              <li>Category: Illustration</li>
+                           </ul>
+                           <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <!-- Modal 2-->
+      <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+               <div class="container">
+                  <div class="row justify-content-center">
+                     <div class="col-lg-8">
+                        <div class="modal-body">
+                           <!-- Project Details Go Here-->
+                           <h2 class="text-uppercase">Project Name</h2>
+                           <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                           <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/02-full.jpg" alt="" />
+                           <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                           <ul class="list-inline">
+                              <li>Date: January 2020</li>
+                              <li>Client: Explore</li>
+                              <li>Category: Graphic Design</li>
+                           </ul>
+                           <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <!-- Modal 3-->
+      <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+               <div class="container">
+                  <div class="row justify-content-center">
+                     <div class="col-lg-8">
+                        <div class="modal-body">
+                           <!-- Project Details Go Here-->
+                           <h2 class="text-uppercase">Project Name</h2>
+                           <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                           <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/03-full.jpg" alt="" />
+                           <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                           <ul class="list-inline">
+                              <li>Date: January 2020</li>
+                              <li>Client: Finish</li>
+                              <li>Category: Identity</li>
+                           </ul>
+                           <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <!-- Modal 4-->
+      <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+               <div class="container">
+                  <div class="row justify-content-center">
+                     <div class="col-lg-8">
+                        <div class="modal-body">
+                           <!-- Project Details Go Here-->
+                           <h2 class="text-uppercase">Project Name</h2>
+                           <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                           <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/04-full.jpg" alt="" />
+                           <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                           <ul class="list-inline">
+                              <li>Date: January 2020</li>
+                              <li>Client: Lines</li>
+                              <li>Category: Branding</li>
+                           </ul>
+                           <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <!-- Modal 5-->
+      <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+               <div class="container">
+                  <div class="row justify-content-center">
+                     <div class="col-lg-8">
+                        <div class="modal-body">
+                           <!-- Project Details Go Here-->
+                           <h2 class="text-uppercase">Project Name</h2>
+                           <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                           <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/05-full.jpg" alt="" />
+                           <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                           <ul class="list-inline">
+                              <li>Date: January 2020</li>
+                              <li>Client: Southwest</li>
+                              <li>Category: Website Design</li>
+                           </ul>
+                           <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+  
+      </div>
+      <!-- Bootstrap core JS-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+      <!-- Third party plugin JS-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+      <!-- Contact form JS-->
+      <script src="assets/mail/jqBootstrapValidation.js"></script>
+      <script src="assets/mail/contact_me.js"></script>
+      <!-- Core theme JS-->
+      <script src="js/scripts.js"></script>
+      <script src="js/auth.js"></script>
+      <!-- <script src="js/auths.js"></script> -->
+
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+
+      <script>
+         // Your web app's Firebase configuration
+         var firebaseConfig = {
+            apiKey: "AIzaSyBag1uyYzOQtbcK200NprDI02lUgFw3B8g",
+            authDomain: "artistroom-d0411.firebaseapp.com",
+            databaseURL: "https://artistroom-d0411.firebaseio.com",
+            projectId: "artistroom-d0411",
+            storageBucket: "artistroom-d0411.appspot.com",
+            messagingSenderId: "307478311495",
+            appId: "1:307478311495:web:7156ef7cb1775b9a1c7762"
+         };
+         // Initialize Firebase
+         firebase.initializeApp(firebaseConfig);
+
+         const auth = firebase.auth();
+         // console.log(auth)
+         const db = firebase.firestore();
+      </script>
+   </body>
+</html>
