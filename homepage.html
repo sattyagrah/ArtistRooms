@@ -10,8 +10,24 @@
       <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
       <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+      <style>
+        button.like {
+          padding: 0;
+          background-color: transparent;
+          border-radius: 50%;
+          font-size: 34px;
+          color: #808080;
+          outline: none;
+          transition: all 0.5s;
+          width: 52px;
+          height: 52px;
+        }
+        button.liked {
+          color: #ff0000;
+        }
+      </style>
    </head>
-   
+ 
    <body id="page-top">
       <!-- Navigation-->
         <span style="font-size:30px;cursor:pointer; padding: 20px;" onclick="openNav()">&#9776;</span>
@@ -25,7 +41,8 @@
             <a class="nav-link js-scroll-trigger" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id="auth" style="font-family: 'Gotu', sans-serif;"> Sign In </a>
             <a class="nav-link js-scroll-trigger" style="width:auto;" id="logout" style="font-family: 'Gotu', sans-serif;"> Log Out </a>
         </div>
-
+ 
+ 
         <div id="Sidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closedNav()">&times;</a>
             <a class="nav-link js-scroll-trigger" href="" style="font-family: 'Gotu', sans-serif; cursor: pointer;"> My Matches </a>
@@ -36,7 +53,7 @@
             <a class="nav-link js-scroll-trigger" href="" style="width:auto; font-family: 'Gotu', sans-serif; cursor: pointer;"> Helpdesk </a>
             <a class="nav-link js-scroll-trigger" href="" style="width:auto; font-family: 'Gotu', sans-serif; cursor: pointer;"> Contact Us </a>
         </div>
-
+ 
         <div class="main">
             <section class="page-section" id="upcomingMatches">
                 <div class="text-center">
@@ -76,63 +93,63 @@
                     <!-- Classic tabs -->           
                 </div>
             </section>
-
+ 
             <div id="participationforms" class="modal" style="overflow: scroll; padding: 20px;">
                 <form class="modal-content animate" id="signin">
                   <div class="imgcontainer">
                     <span onclick="document.getElementById('participationforms').style.display='none';" class="close" title="Close participation form">&times;</span>
                     <!-- <img src="assets/img/logo.png" alt="Avatar" class="avatar"> -->
                   </div>
-                  
+ 
                   <div class="container">
                     <label for="instruction" style="font-family: 'Yatra One', cursive;"><b> General Instructions : </b></label><br>
                       <label for="instruction" style="font-family: 'Gotu', sans-serif;"> 1). The participation fee for this contest is ₹ 5000.</label>
                       <label for="instruction" style="font-family: 'Gotu', sans-serif;">2). First you need to submit the fee. Only then you can participate.</label>
                       <label for="instruction" style="font-family: 'Gotu', sans-serif;">3). UPI : <b>9102842523@ybl</b> or PayTM/Google Pay/PhonePe : <b>9102842523</b></label>
                   </div>
-                  
+ 
                   <div class="container">
                     <label for="uname" style="font-family: 'Gotu', sans-serif;"><b> Name </b></label>
                     <input type="text" id="login-email" placeholder="Enter Name" name="name" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
-    
+ 
                     <!-- <label for="uname" style="font-family: 'Gotu', sans-serif;"><b> Username </b></label>
                     <input type="text" id="login-userName" placeholder="Enter Name" name="userName" required style="font-family: 'Gotu', sans-serif; border-radius: 5px; user-select: none;"><br> -->
-    
+ 
                     <label for="uphone" style="font-family: 'Gotu', sans-serif;"><b> Phone </b></label>
                     <input type="text" id="login-phone" placeholder="Enter Phone Number" name="phone" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
-    
+ 
                     <label for="utheme" style="font-family: 'Gotu', sans-serif;"><b> Theme </b></label>
                     <input type="text" id="login-theme" placeholder="Enter Contest theme" name="theme" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
-    
+ 
                     <label for="udate" style="font-family: 'Gotu', sans-serif;"><b> Date </b></label>
                     <input type="text" id="login-date" placeholder="Enter contest date" name="date" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
-    
+ 
                     <label for="upmode" style="font-family: 'Gotu', sans-serif;"><b> Payment Mode </b></label>
                     <input type="text" id="login-pmode" placeholder="UPI or Phonepe/PayTM" name="pmode" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
-              
+ 
                     <label for="utid" style="font-family: 'Gotu', sans-serif;"><b> Transaction ID </b></label>
                     <input type="text" id="login-TID" placeholder="Enter Transaction ID" name="tid" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
-    
+ 
                     <label for="file" style="font-family: 'Gotu', sans-serif;"><b> Upload File </b></label>
                     <input type="file" id="myFile" name="filename" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br> <br>
-                      
+ 
                     <button type="submit" id="fadebtn" style="font-family: 'Gotu', sans-serif; border-radius: 5px;"> Participate </button>
                   </div>
                 </form>
             </div>
-
-          
-
-        
-
+ 
+ 
+ 
+ 
+ 
         <div class="navbar" style="position: sticky;">
             <a href="homepage.html" class="active" title=" Home "><i class="fa fa-home"></i></a>
             <a href="#"><i class="fa fa-star" title=" My Contests "></i></a>
             <a href="#"><i class="fa fa-user" title=" Profile "></i></a>
             <a href="javascript:void(0)" onclick="opendNav()"><i class="fa fa-ellipsis-h" title="More Info"></i></a>
         </div>
-
-  
+ 
+ 
       </div>
       <!-- Bootstrap core JS-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -146,15 +163,15 @@
       <script src="js/scripts.js"></script>
       <!-- <script src="js/auth.js"></script> -->
       <script src="js/auths.js"></script>
-
+ 
       <!-- The core Firebase JS SDK is always required and must be listed first -->
       <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
       <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
       <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
-
+ 
       <!-- TODO: Add SDKs for Firebase products that you want to use
          https://firebase.google.com/docs/web/setup#available-libraries -->
-
+ 
       <script>
             function openNav() {
                 document.getElementById("mySidenav").style.width = "250px";
@@ -162,24 +179,13 @@
             function opendNav() {
                 document.getElementById("Sidenav").style.width = "250px";
             }
-
+ 
             function closeNav() {
                 document.getElementById("mySidenav").style.width = "0";
             }
             function closedNav() {
                 document.getElementById("Sidenav").style.width = "0";
             }
-            let clicks = 0;
-            const likeButton = document.querySelectorAll('#likes')
-            console.log(likeButton)
-            likeButton.forEach((ele) => {
-                ele.addEventListener('click', (e) => {
-                    e.preventDefault()
-                    document.querySelector('#tup').style.color = "red"
-                    document.querySelector('#no').textContent++
-                // document.querySelector('#no').innerHTML = clicks;
-                })
-            })
          // Your web app's Firebase configuration
          var firebaseConfig = {
             apiKey: "AIzaSyBag1uyYzOQtbcK200NprDI02lUgFw3B8g",
@@ -192,47 +198,54 @@
          };
          // Initialize Firebase
          firebase.initializeApp(firebaseConfig);
-
+ 
          const auth = firebase.auth();
          // console.log(auth)
          const db = firebase.firestore();
-
+ 
+ 
+         function template() {
+            let li =  `
+            <div class="card col-md-12" style="width: 100%; height: 60%; max-width: 700px;">
+                <div class="" style="padding:10px; text-align: left; width: auto;">
+                  <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"></h5>
+                </div>
+                <img class="card-img-top uploaded-image" alt="Card image cap" />
+                <div class="card-body row">
+                    <div style="float: left;">
+                      <button class="like">&#9829;</button>
+                    </div>
+                </div>
+            </div>`;
+ 
+            const parser = new DOMParser();
+            const list = parser.parseFromString(li, 'text/html').querySelector(".card");
+            return list;
+         }
+ 
         function getData(){
             db.collection("participants").get().then(function(querySnapshot) {
                 querySnapshot.forEach(function(doc) {
-
-                    const parent = document.getElementById('new_posts')
-                    let li =  `
-                    <div class="card col-md-12" style="width: 100%; height: 60%; max-width: 700px;">
-                        <div class="" style="padding:10px; text-align: left; width: auto;"><h5 class="card-text" style="font-family: 'Gotu', sans-serif;"> ${doc.data().Username} </h5>
-                        </div>
-                        <img id="upimgs" class="card-img-top" src=${doc.data().Uploaded_File} alt="Card image cap">
-                        <div class="card-body row">
-                            <div style="float: left;">
-                                <a type="button" id="liked"><i class="fa fa-heart" id="tup" style="color: coral;"></i></a>
-                                <a type="button" style="display: none;" id="unliked"><i class="fa fa-heart" style="color: red"></i></a>
-                                </div>
-                            <div style="padding-left:10px;"> <Span id="no"> 0 </Span>
-                            </div>
-                        </div>
-                    </div>
-                        `
-                    var parser = new DOMParser()
-                    var list = parser.parseFromString(li, 'text/html')
-                    list = list.querySelector('.card')
-                    var d1 = document.getElementById('new_posts');
-                    d1.insertAdjacentHTML('afterend', li);
-                    // parent.append(parsedHtml)
-
-                    parent.innerHTML = html
-                    // doc.data() is never undefined for query doc snapshots
-                    console.log(doc.id, " => ", doc.data());
+                  const card = template();
+                  card.querySelector(".uploaded-image").setAttribute( "src", doc.data().Uploaded_File );
+                  card.querySelector(".card-text").innerText = doc.data().Username;
+                  card.querySelector( ".like" ).addEventListener("click", ( ev ) => {
+                    ev.preventDefault();
+                    // console.log( ev.target  )
+                    if (ev.target.classList.contains( "liked" ) ) {
+                      ev.target.classList.remove( "liked" );
+                    } else {
+                      ev.target.classList.add( "liked" );
+                    }
+                  });
+                  const parent = document.querySelector('#new_posts');
+                  parent.appendChild( card );
                 });
             }).catch(function(error) {
                 console.log("Error getting documents: ", error);
             });
         }
-
+ 
         //  document.querySelector('#pbtn').addEventListener('click', (e) => {
         //     e.preventDefault()
         //     document.querySelector('#previousnotice').style.display='none'
