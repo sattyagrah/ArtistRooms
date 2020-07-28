@@ -63,6 +63,16 @@ form.addEventListener('submit', (e) => {
             html += li
             parent.innerHTML = html
             
+            db.collection('participants').add({
+                Name : form.name.value,
+                // Username : document.querySelector('#names').textContent,
+                Phone_Number : form.phone.value,
+                Theme : form.theme.value,
+                Date : form.date.value,
+                Payment_Mode : form.pmode.value,
+                Transaction_ID : form.tid.value,
+                Uploaded_File : imageRes
+            })
         })
     })
     console.log(files)
