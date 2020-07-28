@@ -52,7 +52,6 @@ window.onload = function() {
     //     console.log("Error getting documents: ", error);
     // });
 
-    console.log(db.collection("participants").orderBy("Username", "asc"))
     db.collection('participants').get().then((snapshot) => {
         // setUp(snapshot.docs)
         snapshot.docs.forEach(doc => {
@@ -83,7 +82,7 @@ form.addEventListener('submit', (e) => {
                 Username : document.querySelector('#names').textContent,
                 Uploaded_File : imageRes
             })
-            console.log(db.collection("participants").orderBy("Username", "asc"))
+            // console.log(db.collection("participants").orderBy("Username", "asc"))
             console.log(imageRes)
             const parent = document.querySelector('.feeds').querySelector('#new_posts')
             let html = "" 
