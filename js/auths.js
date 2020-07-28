@@ -15,6 +15,15 @@ function initApp(){
 
 window.onload = function() {
     initApp();
+    db.collection("participants").where("Username", "==", document.querySelector('#names').textContent)
+    .get()
+    .then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+            // doc.data() is never undefined for query doc snapshots
+            console.log(doc.id, " => ", doc.data());
+        });
+    })
+    console.log(db.collection("participants").orderBy("Username", "asc"))
     db.collection('participants').get().then((snapshot) => {
         // setUp(snapshot.docs)
         snapshot.docs.forEach(doc => {
@@ -25,17 +34,7 @@ window.onload = function() {
 
 const form = document.querySelector('#signin')
 form.addEventListener('submit', (e) => {
-    e.preventDefault()  
-    db.collection('participants').add({
-        Name : form.name.value,
-        // Username : document.querySelector('#names').textContent,
-        Phone_Number : form.phone.value,
-        Theme : form.theme.value,
-        Date : form.date.value,
-        Payment_Mode : form.pmode.value,
-        Transaction_ID : form.tid.value,
-        Uploaded_File : form.filename.value
-    })
+    e.preventDefault()
     document.querySelector('#participationforms').style.display = "none"
     const uploadedfiles = document.querySelector('#myFile');
     let files = uploadedfiles.files[0]
@@ -44,6 +43,18 @@ form.addEventListener('submit', (e) => {
     storageref.put(files).then( snapshot => {
         snapshot.ref.getDownloadURL().then(function(url){
             let imageRes = url
+            db.collection('participants').add({
+                Name : form.name.value,
+                // Username : document.querySelector('#names').textContent,
+                Phone_Number : form.phone.value,
+                Theme : form.theme.value,
+                Date : form.date.value,
+                Payment_Mode : form.pmode.value,
+                Transaction_ID : form.tid.value,
+                Username : document.querySelector('#names').textContent,
+                Uploaded_File : imageRes
+            })
+            console.log(db.collection("participants").orderBy("Username", "asc"))
             console.log(imageRes)
             const parent = document.querySelector('.feeds').querySelector('#new_posts')
             let html = "" 
@@ -61,18 +72,7 @@ form.addEventListener('submit', (e) => {
                 </div>
             `
             html += li
-            parent.innerHTML = html
-            
-            db.collection('participants').add({
-                Name : form.name.value,
-                // Username : document.querySelector('#names').textContent,
-                Phone_Number : form.phone.value,
-                Theme : form.theme.value,
-                Date : form.date.value,
-                Payment_Mode : form.pmode.value,
-                Transaction_ID : form.tid.value,
-                Uploaded_File : imageRes
-            })
+            parent.innerHTML = html  
         })
     })
     console.log(files)
