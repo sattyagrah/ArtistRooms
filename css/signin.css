@@ -1,0 +1,27 @@
+.logindiv {
+    padding: 90px !important;
+    padding-top: 152px !important;
+    background: #553971;
+}
+.logoimage{
+	width: 150px;
+}
+.logosignin{
+	text-align: center;
+	margin-bottom: 40px; 
+}
+.signinimage{
+	height: auto;
+}
+.main{
+	    padding: 21px;
+    border: 1px solid lightgray;
+    height: 400px;
+    background: white;
+}
+.loginelements {
+    margin-top: 15%;
+}
+.buttons{
+	float: right;
+}
