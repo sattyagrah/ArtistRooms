@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta name="description" content="" />
+      <title> ArtistRoom | Home | Previous Matches</title>
+      <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+      <link href="css/styles.css" rel="stylesheet" />
+      <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+      <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+      <style>
+          .avatar {
+            align-content: center;
+            max-width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .avatar-p{
+            padding-left: 50px;
+        }
+        .col-md-4{
+            padding: 20px;
+            background: none;
+            border: none;
+        }
+      </style>
+   </head>
+ 
+   <body id="page-top" style="background-color:#EFEFF4;">
+      <!-- Navigation-->
+        <span style="font-size:30px;cursor:pointer; padding: 20px;" onclick="openNav()">&#9776;</span>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="nav-link js-scroll-trigger" href="homepage.html" style="font-family: 'Gotu', sans-serif; cursor: pointer;"> My feeds </a>
+            <a class="nav-link js-scroll-trigger" href="home.html" style="font-family: 'Gotu', sans-serif; cursor: pointer;"> Upcoming </a>
+            <a class="nav-link js-scroll-trigger" href="ongoing-matches.html" style="font-family: 'Gotu', sans-serif; cursor: pointer;"> Live </a>
+            <a class="nav-link js-scroll-trigger" href="previous-matches.html" style="font-family: 'Gotu', sans-serif; cursor: pointer;"> Completed </a>
+            <a class="nav-link js-scroll-trigger" id="names" style="font-family: 'Gotu', sans-serif;"> Welcome </a>
+            <a class="nav-link js-scroll-trigger" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id="auth" style="font-family: 'Gotu', sans-serif;"> Sign In </a>
+            <a class="nav-link js-scroll-trigger" style="width:auto;" id="logout" style="font-family: 'Gotu', sans-serif;"> Log Out </a>
+        </div>
+
+ 
+        <div id="Sidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closedNav()">&times;</a>
+            <a class="nav-link js-scroll-trigger" href="" style="font-family: 'Gotu', sans-serif; cursor: pointer;"> My Matches </a>
+            <a class="nav-link js-scroll-trigger" href="" style="font-family: 'Gotu', sans-serif; cursor: pointer;"> My Account </a>
+            <a class="nav-link js-scroll-trigger" href="" style="font-family: 'Gotu', sans-serif; cursor: pointer;"> Invite Friends </a>
+            <a class="nav-link js-scroll-trigger" href="" style="font-family: 'Gotu', sans-serif; cursor: pointer;"> My Rankings </a>
+            <a class="nav-link js-scroll-trigger" href="" style="width:auto; font-family: 'Gotu', sans-serif; cursor: pointer;"> Personal Details </a>
+            <a class="nav-link js-scroll-trigger" href="" style="width:auto; font-family: 'Gotu', sans-serif; cursor: pointer;"> Helpdesk </a>
+            <a class="nav-link js-scroll-trigger" href="" style="width:auto; font-family: 'Gotu', sans-serif; cursor: pointer;"> Contact Us </a>
+        </div>
+        
+        <div class="main">
+            <div class="avatar-p">
+                <img src="assets/img/tiktok.png" alt="Avatar" class="avatar">
+            </div>
+            <section class="page-section">
+                <div class="container-fluid">
+                    <div class="classic-tabs">
+                        <!-- <ul class="nav tabs-cyan" id="myClassicTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link  waves-light active show" id="profile-tab-classic" data-toggle="tab" href="#profile-classic"
+                                role="tab" aria-controls="profile-classic" aria-selected="true" style="font-family: 'Gotu', sans-serif;"> Photgraphy </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link waves-light" id="follow-tab-classic" data-toggle="tab" href="#follow-classic" role="tab"
+                                aria-controls="follow-classic" aria-selected="false" style="font-family: 'Gotu', sans-serif;"> Short Video </a>
+                            </li>
+                        </ul> -->
+                        <div class="tab-content border-right border-bottom border-left rounded-bottom" id="myClassicTabContent">
+                            <div class="tab-pane fade active show" id="profile-classic" role="tabpanel" aria-labelledby="profile-tab-classic">
+                                <div class="row thumbnails" id="profiles" style="padding: 20px;">
+                                    <!-- <div class="card col-md-4" style="width: 18rem; height: 60%;">
+                                        <img class="card-img-top uploaded-image" src="assets/img/about/camera.jpg" alt="Card image cap">
+                                    </div>
+                                    <div class="card col-md-4" style="width: 18rem; height: 60%;">
+                                        <img class="card-img-top uploaded-image" src="assets/img/about/camera.jpg" alt="Card image cap">
+                                    </div>
+                                    <div class="card col-md-4" style="width: 18rem; height: 60%;">
+                                        <img class="card-img-top uploaded-image" src="assets/img/about/camera.jpg" alt="Card image cap">
+                                    </div>
+                                    <div class="card col-md-4" style="width: 18rem; height: 60%;">
+                                        <img class="card-img-top uploaded-image" src="assets/img/about/camera.jpg" alt="Card image cap">
+                                    </div>
+                                    <div class="card col-md-4" style="width: 18rem; height: 60%;">
+                                        <img class="card-img-top uploaded-image" src="assets/img/about/camera.jpg" alt="Card image cap">
+                                    </div>
+                                    <div class="card col-md-4" style="width: 18rem; height: 60%;">
+                                        <img class="card-img-top uploaded-image" src="assets/img/about/camera.jpg" alt="Card image cap">
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>        
+                </div>
+            </section>
+ 
+            <div id="participationforms" class="modal" style="overflow: scroll; padding: 20px;">
+                <form class="modal-content animate" id="signin">
+                  <div class="imgcontainer">
+                    <span onclick="document.getElementById('participationforms').style.display='none';" class="close" title="Close participation form">&times;</span>
+                    <!-- <img src="assets/img/logo.png" alt="Avatar" class="avatar"> -->
+                  </div>
+ 
+                  <div class="container">
+                    <label for="instruction" style="font-family: 'Yatra One', cursive;"><b> General Instructions : </b></label><br>
+                      <label for="instruction" style="font-family: 'Gotu', sans-serif;"> 1). The participation fee for this contest is ₹ 5000.</label>
+                      <label for="instruction" style="font-family: 'Gotu', sans-serif;">2). First you need to submit the fee. Only then you can participate.</label>
+                      <label for="instruction" style="font-family: 'Gotu', sans-serif;">3). UPI : <b>9102842523@ybl</b> or PayTM/Google Pay/PhonePe : <b>9102842523</b></label>
+                  </div>
+ 
+                  <div class="container">
+                    <label for="uname" style="font-family: 'Gotu', sans-serif;"><b> Name </b></label>
+                    <input type="text" id="login-email" placeholder="Enter Name" name="name" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
+ 
+                    <!-- <label for="uname" style="font-family: 'Gotu', sans-serif;"><b> Username </b></label>
+                    <input type="text" id="login-userName" placeholder="Enter Name" name="userName" required style="font-family: 'Gotu', sans-serif; border-radius: 5px; user-select: none;"><br> -->
+ 
+                    <label for="uphone" style="font-family: 'Gotu', sans-serif;"><b> Phone </b></label>
+                    <input type="text" id="login-phone" placeholder="Enter Phone Number" name="phone" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
+ 
+                    <label for="utheme" style="font-family: 'Gotu', sans-serif;"><b> Theme </b></label>
+                    <input type="text" id="login-theme" placeholder="Enter Contest theme" name="theme" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
+ 
+                    <label for="udate" style="font-family: 'Gotu', sans-serif;"><b> Date </b></label>
+                    <input type="text" id="login-date" placeholder="Enter contest date" name="date" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
+ 
+                    <label for="upmode" style="font-family: 'Gotu', sans-serif;"><b> Payment Mode </b></label>
+                    <input type="text" id="login-pmode" placeholder="UPI or Phonepe/PayTM" name="pmode" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
+ 
+                    <label for="utid" style="font-family: 'Gotu', sans-serif;"><b> Transaction ID </b></label>
+                    <input type="text" id="login-TID" placeholder="Enter Transaction ID" name="tid" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
+ 
+                    <label for="file" style="font-family: 'Gotu', sans-serif;"><b> Upload File </b></label>
+                    <input type="file" id="myFile" name="filename" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br> <br>
+ 
+                    <button type="submit" id="fadebtn" style="font-family: 'Gotu', sans-serif; border-radius: 5px;"> Participate </button>
+                  </div>
+                </form>
+            </div>
+ 
+ 
+            <div class="navbar" style="position: fixed; bottom: 0px;">
+                <a href="homepage.html" class="active" title=" Home "><i class="fa fa-home"></i></a>
+                <a href="#"><i class="fa fa-star" title=" My Contests "></i></a>
+                <a href="profile.html"><i class="fa fa-user" title=" Profile "></i></a>
+                <a href="javascript:void(0)" onclick="opendNav()"><i class="fa fa-ellipsis-h" title="More Info"></i></a>
+            </div>
+        </div>
+
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="assets/mail/jqBootstrapValidation.js"></script>
+        <script src="assets/mail/contact_me.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- <script src="js/auth.js"></script> -->
+        <script src="js/auths.js"></script>
+ 
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+ 
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+ 
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+            function opendNav() {
+                document.getElementById("Sidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+            function closedNav() {
+                document.getElementById("Sidenav").style.width = "0";
+            }
+
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyBag1uyYzOQtbcK200NprDI02lUgFw3B8g",
+                authDomain: "artistroom-d0411.firebaseapp.com",
+                databaseURL: "https://artistroom-d0411.firebaseio.com",
+                projectId: "artistroom-d0411",
+                storageBucket: "artistroom-d0411.appspot.com",
+                messagingSenderId: "307478311495",
+                appId: "1:307478311495:web:7156ef7cb1775b9a1c7762"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+    
+            const auth = firebase.auth();
+            // console.log(auth)
+            const db = firebase.firestore();
+    
+    
+            function template() {
+                let li =  `
+                <div class="card col-md-4" style="width: 18rem; height: 60%;">
+                    <img class="card-img-top uploaded-image" alt="Card image cap">
+                </div>`;
+    
+                const parser = new DOMParser();
+                const list = parser.parseFromString(li, 'text/html').querySelector(".card");
+                return list;
+            }
+    
+            function forProfile(){
+                db.collection("participants").where('Username', '==', document.querySelector('#names').textContent).get()
+                .then(function(querySnapshot) {
+                    querySnapshot.forEach(function(doc) {
+                        const card = template();
+                        card.querySelector(".uploaded-image").setAttribute( "src", doc.data().Uploaded_File );
+                        const parent = document.querySelector('#profiles');
+                        parent.appendChild( card );
+                    });
+                }).catch(function(error) {
+                    console.log("Error getting documents: ", error);
+                });
+            }
+
+            function getData(){
+                db.collection('participants').get().then(function(querySnapshot){
+                    querySnapshot.forEach(function(doc){
+                        console.log(doc.data().Uploaded_File)
+                    })
+                })
+            }
+        </script>
+   </body>
+</html>
