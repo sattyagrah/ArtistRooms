@@ -4,10 +4,10 @@ function initApp(){
             // users(user)
             console.log('User Logged In : ', user.email)
             document.querySelector('#names').innerHTML = user.email.split("@")[0];
-            forProfile();
-            profilePicture();
             document.querySelector('#auth').style.display = "none";
             document.querySelector('#logout').style.display = "block";
+            forProfile();
+            profilePicture();
         }else{
             // users([])
             console.log('User Logged Out!! ')

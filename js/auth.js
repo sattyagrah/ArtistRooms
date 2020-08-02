@@ -29,7 +29,7 @@ signupform.addEventListener('submit', (e) => {
         signupform.reset();
         document.querySelector('#auth').style.display = "none";
         document.querySelector('#logout').style.display = "block";
-        window.location.replace("home.html")
+        window.location.replace("homepage.html")
     })
 })
 
@@ -47,7 +47,7 @@ signinform.addEventListener('submit', (e) => {
         const modals = document.querySelector('#id01');
         modals.style.display = 'none';
         signinform.reset(); 
-        window.location.replace("home.html") 
+        window.location.replace("homepage.html") 
     })
 })
 
