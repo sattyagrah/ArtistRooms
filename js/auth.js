@@ -23,13 +23,21 @@ signupform.addEventListener('submit', (e) => {
     // console.log(email, password)
 
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
+        return db.collection('user_details').doc(cred.user.uid).set({
+            Initial_Name : signupform['name'].value
+        })
+        
+    }).then(() => {
         // console.log(cred)
         const modal = document.querySelector('#id02');
         modal.style.display = 'none';
+        signupform.querySelector('.error').innerHTML = '';
         signupform.reset();
         document.querySelector('#auth').style.display = "none";
         document.querySelector('#logout').style.display = "block";
         window.location.replace("homepage.html")
+    }).catch(err => {
+        signupform.querySelector('.error').innerHTML = err.message;
     })
 })
 
@@ -46,9 +54,27 @@ signinform.addEventListener('submit', (e) => {
         document.querySelector('#logout').style.display = "block";
         const modals = document.querySelector('#id01');
         modals.style.display = 'none';
+        signinform.querySelector('.error').innerHTML = '';
         signinform.reset(); 
         window.location.replace("homepage.html") 
+    }).catch(err => {
+        signinform.querySelector('.error').innerHTML = err.message;
     })
+})
+
+const forgotform = document.querySelector('#forgot')
+forgotform.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    const email = forgotform['forgot-email'].value;
+    if(email != null){
+        auth.sendPasswordResetEmail(email).then(function() {
+            // Email sent.
+            forgotform.querySelector('.error').innerHTML = "Email sent successfully.";
+          }).catch(err => {
+            forgotform.querySelector('.error').innerHTML = err.message;
+        })
+    }
 })
 
 const logout = document.querySelector('#logout');

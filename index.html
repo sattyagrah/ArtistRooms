@@ -213,9 +213,12 @@
              <button type="submit" style="font-family: 'Gotu', sans-serif;">Log In</button>
            </div>
        
-           <div class="container" style="background-color:#f1f1f1">
+           <div class="container">
              <button type="button" style="font-family: 'Gotu', sans-serif;" onclick="document.getElementById('id01').style.display='none'; document.getElementById('id02').style.display='block'" class="cancelbtn"> Create Account </button>
-             <span class="psw" style="font-family: 'Gotu', sans-serif;">Forgot <a href="#">password?</a></span>
+             <span class="psw" style="font-family: 'Gotu', sans-serif;">Forgot <a onclick="document.getElementById('id01').style.display='none'; document.getElementById('id02').style.display='none'; document.getElementById('id03').style.display='block'" style="cursor: pointer; color: indianred;">password?</a></span>
+           </div>
+           <div class="container">
+            <p class="error pink-text" style="font-family: 'Gotu', sans-serif; text-align: center; color: firebrick;">  </p>
            </div>
          </form>
       </div>
@@ -228,6 +231,9 @@
            </div>
        
            <div class="container">
+            <label for="name" style="font-family: 'Gotu', sans-serif;"><b> Name </b></label>
+            <input type="text" id="name" placeholder="Enter Name" name="name" required style="font-family: 'Gotu', sans-serif;">
+
              <label for="uname" style="font-family: 'Gotu', sans-serif;"><b>Username</b></label>
              <input type="text" id="email" placeholder="Enter Username" name="uname" required style="font-family: 'Gotu', sans-serif;">
        
@@ -237,9 +243,32 @@
              <button type="submit" style="font-family: 'Gotu', sans-serif;"> Create </button>
            </div>
        
-           <div class="container" style="background-color:#f1f1f1">
+           <div class="container">
              <button type="button" onclick="document.getElementById('id02').style.display='none'; document.getElementById('id01').style.display='block'" class="cancelbtn" style="font-family: 'Gotu', sans-serif;"> Already a user? </button>
-             <span class="psw" style="font-family: 'Gotu', sans-serif;">Forgot <a href="#">password?</a></span>
+             <span class="psw" style="font-family: 'Gotu', sans-serif;">Forgot <a onclick="document.getElementById('id01').style.display='none'; document.getElementById('id02').style.display='none'; document.getElementById('id03').style.display='block'" style="cursor: pointer; color: indianred;">password?</a></span>
+           </div>
+
+           <div class="container">
+            <p class="error pink-text" style="font-family: 'Gotu', sans-serif; text-align: center; color: firebrick;">  </p>
+           </div>
+         </form>
+      </div>
+
+      <div id="id03" class="modal" style="padding: 20px;">
+         <form class="modal-content animate" id="forgot">       
+           <div class="container">
+             <label for="uname" style="font-family: 'Gotu', sans-serif;"><b>Username</b></label>
+             <input type="text" id="forgot-email" placeholder="Enter Username" name="uname" required style="font-family: 'Gotu', sans-serif;">
+        
+             <button type="submit" style="font-family: 'Gotu', sans-serif;"> Reset Password </button>
+           </div>
+       
+           <div class="container">
+             <button type="button" onclick="document.getElementById('id02').style.display='none'; document.getElementById('id01').style.display='block'; document.getElementById('id03').style.display='none'" class="cancelbtn" style="font-family: 'Gotu', sans-serif;"> Already a user? </button>
+           </div>
+
+           <div class="container">
+            <p class="error pink-text" style="font-family: 'Gotu', sans-serif; text-align: center; color: firebrick;">  </p>
            </div>
          </form>
       </div>
