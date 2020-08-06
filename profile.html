@@ -46,13 +46,10 @@
  
         <div id="Sidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closedNav()">&times;</a>
-            <a class="nav-link js-scroll-trigger" href="" style="font-family: 'Gotu', sans-serif; cursor: pointer;"> My Matches </a>
-            <a class="nav-link js-scroll-trigger" href="" style="font-family: 'Gotu', sans-serif; cursor: pointer;"> My Account </a>
-            <a class="nav-link js-scroll-trigger" href="" style="font-family: 'Gotu', sans-serif; cursor: pointer;"> Invite Friends </a>
-            <a class="nav-link js-scroll-trigger" href="" style="font-family: 'Gotu', sans-serif; cursor: pointer;"> My Rankings </a>
-            <a class="nav-link js-scroll-trigger" href="" style="width:auto; font-family: 'Gotu', sans-serif; cursor: pointer;"> Personal Details </a>
-            <a class="nav-link js-scroll-trigger" href="" style="width:auto; font-family: 'Gotu', sans-serif; cursor: pointer;"> Helpdesk </a>
-            <a class="nav-link js-scroll-trigger" href="" style="width:auto; font-family: 'Gotu', sans-serif; cursor: pointer;"> Contact Us </a>
+            <a class="nav-link js-scroll-trigger" onclick="document.querySelector('#id07').style.display = 'block'" style="font-family: 'Gotu', sans-serif; cursor: pointer;"> Invite Friends </a>
+            <a class="nav-link js-scroll-trigger" onclick="document.querySelector('#id06').style.display = 'block'" style="width:auto; font-family: 'Gotu', sans-serif; cursor: pointer;"> Personal Details </a>
+            <a class="nav-link js-scroll-trigger" onclick="document.querySelector('#id05').style.display = 'block'" style="width:auto; font-family: 'Gotu', sans-serif; cursor: pointer;"> Helpdesk </a>
+            <a class="nav-link js-scroll-trigger" onclick="document.querySelector('#id04').style.display = 'block'" style="width:auto; font-family: 'Gotu', sans-serif; cursor: pointer;"> Contact Us </a>
         </div>
         
         <div class="main">
@@ -105,6 +102,106 @@
                 <a href="profile.html" class="active"><i class="fa fa-user" title=" Profile "></i></a>
                 <a href="javascript:void(0)" onclick="opendNav()"><i class="fa fa-ellipsis-h" title="More Info"></i></a>
             </div>
+
+            <div id="id04" class="modal" style="padding: 20px; display: none; system: height;">
+                <form class="modal-content animate" id="signup">
+                  <div class="imgcontainer">
+                    <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal" style="color: red">&times;</span>
+                    <!-- <img src="assets/img/logo.png" alt="Avatar" class="avatar"> -->
+                  </div>
+                  <div class="container">
+                    <div class="text-center">
+                      <div class="row">
+                        <div class="col-md-12" style="background-color: rgba(0, 0, 0, 0.7);">
+                          <img class="logoimage" src="assets/img/logo.png"  style="height: 70px; padding: 15px;"/><br>
+                          <!-- <h3 class="section-subheading text-muted" style="font-family: 'Gotu', sans-serif; color: white; font-weight: 400;"><b> For any query feel free to reach us at : <a href="mailto:askartistroom@gmail.com?"> askartistroom@gmail.com </a></b></h3> -->
+                          <div style="display: inline-block; padding: 25px;">
+                              <a class="btn btn-social mx-2" href="https://twitter.com/ArtistRoom2" style="background-color: yellow;"><i class="fab fa-twitter"></i></a>
+                              <a class="btn btn-social mx-2" href="https://www.instagram.com/artistroom11/" style="background-color: yellow;"><i class="fab fa-instagram"></i></a>
+                              <a class="btn btn-social mx-2" href="https://t.me/Officialartistroom" style="background-color: yellow;"><i class="fab fa-telegram"></i></a>
+                              <a class="btn btn-social mx-2" href="https://m.facebook.com/Artist-Room-115761216843685/" style="background-color: yellow;"><i class="fab fa-facebook-f"></i></a>
+                              <a class="btn btn-social mx-2" href="https://www.linkedin.com/in/artist-room-0976811b0" style="background-color: yellow;"><i class="fab fa-linkedin-in"></i></a>
+                          </div>
+                          <!-- <h3 class="section-subheading text-muted" style="font-family: 'Gotu', sans-serif; color: white; font-weight: 400;"><b><a class="btn btn-social mx-2" href="https://twitter.com/ArtistRoom2" style="background-color: yellow;"><i class="fab fa-twitter"></i></a><a class="btn btn-social mx-2" href="https://www.instagram.com/artistroom11/" style="background-color: yellow;"><i class="fab fa-instagram"></i></a><a class="btn btn-social mx-2" href="https://t.me/Officialartistroom" style="background-color: yellow;"><i class="fab fa-telegram"></i></a><a class="btn btn-social mx-2" href="https://m.facebook.com/Artist-Room-115761216843685/" style="background-color: yellow;"><i class="fab fa-facebook-f"></i></a><a class="btn btn-social mx-2" href="https://www.linkedin.com/in/artist-room-0976811b0" style="background-color: yellow;"><i class="fab fa-linkedin-in"></i></a></b></h3> -->
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+                </form>
+              </div>
+    
+              <div id="id05" class="modal" style="padding: 20px; display: none; system: height;">
+                <form class="modal-content animate" id="signup">
+                  <div class="imgcontainer">
+                    <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close Modal" style="color: red">&times;</span>
+                    <!-- <img src="assets/img/logo.png" alt="Avatar" class="avatar"> -->
+                  </div>
+                  <div class="container">
+                    <div class="text-center">
+                      <div class="row">
+                        <div class="col-md-12" style="background-color: rgba(0, 0, 0, 0.7);">
+                          <img class="logoimage" src="assets/img/logo.png"  style="height: 70px; padding: 15px;"/><br>
+                          <!-- <h3 class="section-subheading text-muted" style="font-family: 'Gotu', sans-serif; color: white; font-weight: 400;"><b> For any query feel free to reach us at : <a href="mailto:askartistroom@gmail.com?"> askartistroom@gmail.com </a></b></h3> -->
+                          <div class="row" id="lows">
+                            <div class="col-md-12">
+                               <h3 style="font-family: 'Gotu', sans-serif; color: antiquewhite;">For Help contact us at : <a href="mailto:askartistroom@gmail.com?" style="text-decoration: none; font-size: medium;"><h3> Email </h3></a></h3>
+                            </div>
+                         </div>
+                          <!-- <h3 class="section-subheading text-muted" style="font-family: 'Gotu', sans-serif; color: white; font-weight: 400;"><b><a class="btn btn-social mx-2" href="https://twitter.com/ArtistRoom2" style="background-color: yellow;"><i class="fab fa-twitter"></i></a><a class="btn btn-social mx-2" href="https://www.instagram.com/artistroom11/" style="background-color: yellow;"><i class="fab fa-instagram"></i></a><a class="btn btn-social mx-2" href="https://t.me/Officialartistroom" style="background-color: yellow;"><i class="fab fa-telegram"></i></a><a class="btn btn-social mx-2" href="https://m.facebook.com/Artist-Room-115761216843685/" style="background-color: yellow;"><i class="fab fa-facebook-f"></i></a><a class="btn btn-social mx-2" href="https://www.linkedin.com/in/artist-room-0976811b0" style="background-color: yellow;"><i class="fab fa-linkedin-in"></i></a></b></h3> -->
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+                </form>
+              </div>
+    
+              <div id="id06" class="modal" style="padding: 20px; display: none; system: height;">
+                <form class="modal-content animate" id="signup">
+                  <div class="imgcontainer">
+                    <span onclick="document.getElementById('id06').style.display='none'" class="close" title="Close Modal" style="color: red">&times;</span>
+                    <!-- <img src="assets/img/logo.png" alt="Avatar" class="avatar"> -->
+                  </div>
+                  <div class="container">
+                    <div class="text-center">
+                      <div class="row">
+                        <div class="col-md-12" style="background-color: rgba(0, 0, 0, 0.7);">
+                          <img class="logoimage" src="assets/img/logo.png"  style="height: 70px; padding: 15px;"/><br>
+                          <!-- <h3 class="section-subheading text-muted" style="font-family: 'Gotu', sans-serif; color: white; font-weight: 400;"><b> For any query feel free to reach us at : <a href="mailto:askartistroom@gmail.com?"> askartistroom@gmail.com </a></b></h3> -->
+                          <div class="row" id="lows">
+                            <div class="col-md-12 tob">
+                               <h3 id="userdetail" style="font-family: 'Gotu', sans-serif; color: antiquewhite;"></h3>
+                            </div>
+                         </div>
+                          <!-- <h3 class="section-subheading text-muted" style="font-family: 'Gotu', sans-serif; color: white; font-weight: 400;"><b><a class="btn btn-social mx-2" href="https://twitter.com/ArtistRoom2" style="background-color: yellow;"><i class="fab fa-twitter"></i></a><a class="btn btn-social mx-2" href="https://www.instagram.com/artistroom11/" style="background-color: yellow;"><i class="fab fa-instagram"></i></a><a class="btn btn-social mx-2" href="https://t.me/Officialartistroom" style="background-color: yellow;"><i class="fab fa-telegram"></i></a><a class="btn btn-social mx-2" href="https://m.facebook.com/Artist-Room-115761216843685/" style="background-color: yellow;"><i class="fab fa-facebook-f"></i></a><a class="btn btn-social mx-2" href="https://www.linkedin.com/in/artist-room-0976811b0" style="background-color: yellow;"><i class="fab fa-linkedin-in"></i></a></b></h3> -->
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+                </form>
+              </div>
+    
+              <div id="id07" class="modal" style="padding: 20px; display: none; system: height;">
+                <form class="modal-content animate" id="signup">
+                  <div class="imgcontainer">
+                    <span onclick="document.getElementById('id07').style.display='none'" class="close" title="Close Modal" style="color: red">&times;</span>
+                    <!-- <img src="assets/img/logo.png" alt="Avatar" class="avatar"> -->
+                  </div>
+                  <div class="container">
+                    <div class="text-center">
+                      <div class="row">
+                        <div class="col-md-12" style="background-color: rgba(0, 0, 0, 0.7);">
+                          <img class="logoimage" src="assets/img/logo.png"  style="height: 70px; padding: 15px;"/><br>
+                          <!-- <h3 class="section-subheading text-muted" style="font-family: 'Gotu', sans-serif; color: white; font-weight: 400;"><b> For any query feel free to reach us at : <a href="mailto:askartistroom@gmail.com?"> askartistroom@gmail.com </a></b></h3> -->
+                          <div style="display: inline-block; padding: 25px;">
+                             <h3 style="font-family: 'Gotu', sans-serif; color: antiquewhite;">Invite Friends via <a class="btn btn-social mx-2" href="https://api.whatsapp.com/send?phone=918865862464" style="background-color: yellow;"><i class="fab fa-whatsapp"></i></a></h3>
+                          </div>
+                          <!-- <h3 class="section-subheading text-muted" style="font-family: 'Gotu', sans-serif; color: white; font-weight: 400;"><b><a class="btn btn-social mx-2" href="https://twitter.com/ArtistRoom2" style="background-color: yellow;"><i class="fab fa-twitter"></i></a><a class="btn btn-social mx-2" href="https://www.instagram.com/artistroom11/" style="background-color: yellow;"><i class="fab fa-instagram"></i></a><a class="btn btn-social mx-2" href="https://t.me/Officialartistroom" style="background-color: yellow;"><i class="fab fa-telegram"></i></a><a class="btn btn-social mx-2" href="https://m.facebook.com/Artist-Room-115761216843685/" style="background-color: yellow;"><i class="fab fa-facebook-f"></i></a><a class="btn btn-social mx-2" href="https://www.linkedin.com/in/artist-room-0976811b0" style="background-color: yellow;"><i class="fab fa-linkedin-in"></i></a></b></h3> -->
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+                </form>
+              </div>
         </div>
 
 

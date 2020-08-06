@@ -3,6 +3,7 @@ function initApp(){
         if(user){
             // users(user)
             console.log('User Logged In : ', user.email)
+            document.querySelector('#userdetail').innerHTML = "Logged in as :" +" "+ user.email
             document.querySelector('#names').innerHTML = user.email.split("@")[0];
             document.querySelector('#auth').style.display = "none";
             document.querySelector('#logout').style.display = "block";

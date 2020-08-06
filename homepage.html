@@ -45,112 +45,204 @@
  
         <div id="Sidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closedNav()">&times;</a>
-            <a class="nav-link js-scroll-trigger" href="" style="font-family: 'Gotu', sans-serif; cursor: pointer;"> My Matches </a>
-            <a class="nav-link js-scroll-trigger" href="" style="font-family: 'Gotu', sans-serif; cursor: pointer;"> My Account </a>
-            <a class="nav-link js-scroll-trigger" href="" style="font-family: 'Gotu', sans-serif; cursor: pointer;"> Invite Friends </a>
-            <a class="nav-link js-scroll-trigger" href="" style="font-family: 'Gotu', sans-serif; cursor: pointer;"> My Rankings </a>
-            <a class="nav-link js-scroll-trigger" href="" style="width:auto; font-family: 'Gotu', sans-serif; cursor: pointer;"> Personal Details </a>
-            <a class="nav-link js-scroll-trigger" href="" style="width:auto; font-family: 'Gotu', sans-serif; cursor: pointer;"> Helpdesk </a>
-            <a class="nav-link js-scroll-trigger" href="" style="width:auto; font-family: 'Gotu', sans-serif; cursor: pointer;"> Contact Us </a>
+            <a class="nav-link js-scroll-trigger" onclick="document.querySelector('#id07').style.display = 'block'" style="font-family: 'Gotu', sans-serif; cursor: pointer;"> Invite Friends </a>
+            <a class="nav-link js-scroll-trigger" onclick="document.querySelector('#id06').style.display = 'block'" style="width:auto; font-family: 'Gotu', sans-serif; cursor: pointer;"> Personal Details </a>
+            <a class="nav-link js-scroll-trigger" onclick="document.querySelector('#id05').style.display = 'block'" style="width:auto; font-family: 'Gotu', sans-serif; cursor: pointer;"> Helpdesk </a>
+            <a class="nav-link js-scroll-trigger" onclick="document.querySelector('#id04').style.display = 'block'" style="width:auto; font-family: 'Gotu', sans-serif; cursor: pointer;"> Contact Us </a>
         </div>
  
         <div class="main">
-            <section class="page-section" id="upcomingMatches">
+          <section class="page-section" id="upcomingMatches">
+              <div class="text-center">
+                  <h2 class="section-heading text-uppercase" style="font-family: 'Yatra One', cursive;"> My Feeds </h2>         
+              </div>
+              <div class="container-fluid">
+                  <!-- Classic tabs -->
+                  <div class="classic-tabs">
+                      <!-- <ul class="nav tabs-cyan" id="myClassicTab" role="tablist">
+                          <li class="nav-item">
+                              <a class="nav-link  waves-light active show" id="profile-tab-classic" data-toggle="tab" href="#profile-classic"
+                              role="tab" aria-controls="profile-classic" aria-selected="true" style="font-family: 'Gotu', sans-serif;"> Photgraphy </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link waves-light" id="follow-tab-classic" data-toggle="tab" href="#follow-classic" role="tab"
+                              aria-controls="follow-classic" aria-selected="false" style="font-family: 'Gotu', sans-serif;"> Short Video </a>
+                          </li>
+                      </ul> -->
+                      <div class="tab-content border-right border-bottom border-left rounded-bottom" id="myClassicTabContent">
+                          <div class="tab-pane fade active show" id="profile-classic" role="tabpanel" aria-labelledby="profile-tab-classic">
+                              <div class="thumbnails" id="new_posts">
+                                  <!-- <div class="card col-md-12" style="width: 100%; height: 60%; max-width: 700px;">
+                                      <div class="" style="padding:10px; text-align: left; width: auto;"><h5 class="card-text" style="font-family: 'Gotu', sans-serif;"> Johndoe </h5>
+                                      </div>
+                                      <img id="upimgs" class="card-img-top" src="assets/img/about/camera.jpg" alt="Card image cap">
+                                      <div class="card-body row">
+                                          <div class=""  style="float: left;"><a href="" id="likes"><i class="fa fa-heart" id="tup" style="color: coral;"></i></a>
+                                          </div>
+                                          <div class="" style="padding-left:10px;"> <Span id="no"> 0 </Span>
+                                          </div>
+                                      </div>
+                                  </div> -->
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Classic tabs -->           
+              </div>
+          </section>
+ 
+          <div id="participationforms" class="modal" style="overflow: scroll; padding: 20px;">
+              <form class="modal-content animate" id="signin">
+                <div class="imgcontainer">
+                  <span onclick="document.getElementById('participationforms').style.display='none';" class="close" title="Close participation form">&times;</span>
+                  <!-- <img src="assets/img/logo.png" alt="Avatar" class="avatar"> -->
+                </div>
+
+                <div class="container">
+                  <label for="instruction" style="font-family: 'Yatra One', cursive;"><b> General Instructions : </b></label><br>
+                    <label for="instruction" style="font-family: 'Gotu', sans-serif;"> 1). The participation fee for this contest is ₹ 5000.</label>
+                    <label for="instruction" style="font-family: 'Gotu', sans-serif;">2). First you need to submit the fee. Only then you can participate.</label>
+                    <label for="instruction" style="font-family: 'Gotu', sans-serif;">3). UPI : <b>9102842523@ybl</b> or PayTM/Google Pay/PhonePe : <b>9102842523</b></label>
+                </div>
+
+                <div class="container">
+                  <label for="uname" style="font-family: 'Gotu', sans-serif;"><b> Name </b></label>
+                  <input type="text" id="login-email" placeholder="Enter Name" name="name" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
+
+                  <!-- <label for="uname" style="font-family: 'Gotu', sans-serif;"><b> Username </b></label>
+                  <input type="text" id="login-userName" placeholder="Enter Name" name="userName" required style="font-family: 'Gotu', sans-serif; border-radius: 5px; user-select: none;"><br> -->
+
+                  <label for="uphone" style="font-family: 'Gotu', sans-serif;"><b> Phone </b></label>
+                  <input type="text" id="login-phone" placeholder="Enter Phone Number" name="phone" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
+
+                  <label for="utheme" style="font-family: 'Gotu', sans-serif;"><b> Theme </b></label>
+                  <input type="text" id="login-theme" placeholder="Enter Contest theme" name="theme" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
+
+                  <label for="udate" style="font-family: 'Gotu', sans-serif;"><b> Date </b></label>
+                  <input type="text" id="login-date" placeholder="Enter contest date" name="date" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
+
+                  <label for="upmode" style="font-family: 'Gotu', sans-serif;"><b> Payment Mode </b></label>
+                  <input type="text" id="login-pmode" placeholder="UPI or Phonepe/PayTM" name="pmode" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
+
+                  <label for="utid" style="font-family: 'Gotu', sans-serif;"><b> Transaction ID </b></label>
+                  <input type="text" id="login-TID" placeholder="Enter Transaction ID" name="tid" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
+
+                  <label for="file" style="font-family: 'Gotu', sans-serif;"><b> Upload File </b></label>
+                  <input type="file" id="myFile" name="filename" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br> <br>
+
+                  <button type="submit" id="fadebtn" style="font-family: 'Gotu', sans-serif; border-radius: 5px;"> Participate </button>
+                </div>
+              </form>
+          </div> 
+ 
+          <div class="navbar" style="position: fixed; bottom: 0px;">
+              <a href="homepage.html" class="active" title=" Home "><i class="fa fa-home"></i></a>
+              <a href="#"><i class="fa fa-star" title=" My Contests "></i></a>
+              <a href="profile.html"><i class="fa fa-user" title=" Profile "></i></a>
+              <a href="javascript:void(0)" onclick="opendNav()"><i class="fa fa-ellipsis-h" title="More Info"></i></a>
+          </div>
+
+          <div id="id04" class="modal" style="padding: 20px; display: none; system: height;">
+            <form class="modal-content animate" id="signup">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal" style="color: red">&times;</span>
+                <!-- <img src="assets/img/logo.png" alt="Avatar" class="avatar"> -->
+              </div>
+              <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase" style="font-family: 'Yatra One', cursive;"> My Feeds </h2>         
-                </div>
-                <div class="container-fluid">
-                    <!-- Classic tabs -->
-                    <div class="classic-tabs">
-                        <!-- <ul class="nav tabs-cyan" id="myClassicTab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link  waves-light active show" id="profile-tab-classic" data-toggle="tab" href="#profile-classic"
-                                role="tab" aria-controls="profile-classic" aria-selected="true" style="font-family: 'Gotu', sans-serif;"> Photgraphy </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link waves-light" id="follow-tab-classic" data-toggle="tab" href="#follow-classic" role="tab"
-                                aria-controls="follow-classic" aria-selected="false" style="font-family: 'Gotu', sans-serif;"> Short Video </a>
-                            </li>
-                        </ul> -->
-                        <div class="tab-content border-right border-bottom border-left rounded-bottom" id="myClassicTabContent">
-                            <div class="tab-pane fade active show" id="profile-classic" role="tabpanel" aria-labelledby="profile-tab-classic">
-                                <div class="thumbnails" id="new_posts">
-                                    <!-- <div class="card col-md-12" style="width: 100%; height: 60%; max-width: 700px;">
-                                        <div class="" style="padding:10px; text-align: left; width: auto;"><h5 class="card-text" style="font-family: 'Gotu', sans-serif;"> Johndoe </h5>
-                                        </div>
-                                        <img id="upimgs" class="card-img-top" src="assets/img/about/camera.jpg" alt="Card image cap">
-                                        <div class="card-body row">
-                                            <div class=""  style="float: left;"><a href="" id="likes"><i class="fa fa-heart" id="tup" style="color: coral;"></i></a>
-                                            </div>
-                                            <div class="" style="padding-left:10px;"> <Span id="no"> 0 </Span>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
+                  <div class="row">
+                    <div class="col-md-12" style="background-color: rgba(0, 0, 0, 0.7);">
+                      <img class="logoimage" src="assets/img/logo.png"  style="height: 70px; padding: 15px;"/><br>
+                      <!-- <h3 class="section-subheading text-muted" style="font-family: 'Gotu', sans-serif; color: white; font-weight: 400;"><b> For any query feel free to reach us at : <a href="mailto:askartistroom@gmail.com?"> askartistroom@gmail.com </a></b></h3> -->
+                      <div style="display: inline-block; padding: 25px;">
+                          <a class="btn btn-social mx-2" href="https://twitter.com/ArtistRoom2" style="background-color: yellow;"><i class="fab fa-twitter"></i></a>
+                          <a class="btn btn-social mx-2" href="https://www.instagram.com/artistroom11/" style="background-color: yellow;"><i class="fab fa-instagram"></i></a>
+                          <a class="btn btn-social mx-2" href="https://t.me/Officialartistroom" style="background-color: yellow;"><i class="fab fa-telegram"></i></a>
+                          <a class="btn btn-social mx-2" href="https://m.facebook.com/Artist-Room-115761216843685/" style="background-color: yellow;"><i class="fab fa-facebook-f"></i></a>
+                          <a class="btn btn-social mx-2" href="https://www.linkedin.com/in/artist-room-0976811b0" style="background-color: yellow;"><i class="fab fa-linkedin-in"></i></a>
+                      </div>
+                      <!-- <h3 class="section-subheading text-muted" style="font-family: 'Gotu', sans-serif; color: white; font-weight: 400;"><b><a class="btn btn-social mx-2" href="https://twitter.com/ArtistRoom2" style="background-color: yellow;"><i class="fab fa-twitter"></i></a><a class="btn btn-social mx-2" href="https://www.instagram.com/artistroom11/" style="background-color: yellow;"><i class="fab fa-instagram"></i></a><a class="btn btn-social mx-2" href="https://t.me/Officialartistroom" style="background-color: yellow;"><i class="fab fa-telegram"></i></a><a class="btn btn-social mx-2" href="https://m.facebook.com/Artist-Room-115761216843685/" style="background-color: yellow;"><i class="fab fa-facebook-f"></i></a><a class="btn btn-social mx-2" href="https://www.linkedin.com/in/artist-room-0976811b0" style="background-color: yellow;"><i class="fab fa-linkedin-in"></i></a></b></h3> -->
                     </div>
-                    <!-- Classic tabs -->           
-                </div>
-            </section>
- 
-            <div id="participationforms" class="modal" style="overflow: scroll; padding: 20px;">
-                <form class="modal-content animate" id="signin">
-                  <div class="imgcontainer">
-                    <span onclick="document.getElementById('participationforms').style.display='none';" class="close" title="Close participation form">&times;</span>
-                    <!-- <img src="assets/img/logo.png" alt="Avatar" class="avatar"> -->
                   </div>
- 
-                  <div class="container">
-                    <label for="instruction" style="font-family: 'Yatra One', cursive;"><b> General Instructions : </b></label><br>
-                      <label for="instruction" style="font-family: 'Gotu', sans-serif;"> 1). The participation fee for this contest is ₹ 5000.</label>
-                      <label for="instruction" style="font-family: 'Gotu', sans-serif;">2). First you need to submit the fee. Only then you can participate.</label>
-                      <label for="instruction" style="font-family: 'Gotu', sans-serif;">3). UPI : <b>9102842523@ybl</b> or PayTM/Google Pay/PhonePe : <b>9102842523</b></label>
+                </div>  
+              </div>
+            </form>
+          </div>
+
+          <div id="id05" class="modal" style="padding: 20px; display: none; system: height;">
+            <form class="modal-content animate" id="signup">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close Modal" style="color: red">&times;</span>
+                <!-- <img src="assets/img/logo.png" alt="Avatar" class="avatar"> -->
+              </div>
+              <div class="container">
+                <div class="text-center">
+                  <div class="row">
+                    <div class="col-md-12" style="background-color: rgba(0, 0, 0, 0.7);">
+                      <img class="logoimage" src="assets/img/logo.png"  style="height: 70px; padding: 15px;"/><br>
+                      <!-- <h3 class="section-subheading text-muted" style="font-family: 'Gotu', sans-serif; color: white; font-weight: 400;"><b> For any query feel free to reach us at : <a href="mailto:askartistroom@gmail.com?"> askartistroom@gmail.com </a></b></h3> -->
+                      <div class="row" id="lows">
+                        <div class="col-md-12">
+                           <h3 style="font-family: 'Gotu', sans-serif; color: antiquewhite;">For Help contact us at : <a href="mailto:askartistroom@gmail.com?" style="text-decoration: none; font-size: medium;"><h3> Email </h3></a></h3>
+                        </div>
+                     </div>
+                      <!-- <h3 class="section-subheading text-muted" style="font-family: 'Gotu', sans-serif; color: white; font-weight: 400;"><b><a class="btn btn-social mx-2" href="https://twitter.com/ArtistRoom2" style="background-color: yellow;"><i class="fab fa-twitter"></i></a><a class="btn btn-social mx-2" href="https://www.instagram.com/artistroom11/" style="background-color: yellow;"><i class="fab fa-instagram"></i></a><a class="btn btn-social mx-2" href="https://t.me/Officialartistroom" style="background-color: yellow;"><i class="fab fa-telegram"></i></a><a class="btn btn-social mx-2" href="https://m.facebook.com/Artist-Room-115761216843685/" style="background-color: yellow;"><i class="fab fa-facebook-f"></i></a><a class="btn btn-social mx-2" href="https://www.linkedin.com/in/artist-room-0976811b0" style="background-color: yellow;"><i class="fab fa-linkedin-in"></i></a></b></h3> -->
+                    </div>
                   </div>
- 
-                  <div class="container">
-                    <label for="uname" style="font-family: 'Gotu', sans-serif;"><b> Name </b></label>
-                    <input type="text" id="login-email" placeholder="Enter Name" name="name" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
- 
-                    <!-- <label for="uname" style="font-family: 'Gotu', sans-serif;"><b> Username </b></label>
-                    <input type="text" id="login-userName" placeholder="Enter Name" name="userName" required style="font-family: 'Gotu', sans-serif; border-radius: 5px; user-select: none;"><br> -->
- 
-                    <label for="uphone" style="font-family: 'Gotu', sans-serif;"><b> Phone </b></label>
-                    <input type="text" id="login-phone" placeholder="Enter Phone Number" name="phone" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
- 
-                    <label for="utheme" style="font-family: 'Gotu', sans-serif;"><b> Theme </b></label>
-                    <input type="text" id="login-theme" placeholder="Enter Contest theme" name="theme" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
- 
-                    <label for="udate" style="font-family: 'Gotu', sans-serif;"><b> Date </b></label>
-                    <input type="text" id="login-date" placeholder="Enter contest date" name="date" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
- 
-                    <label for="upmode" style="font-family: 'Gotu', sans-serif;"><b> Payment Mode </b></label>
-                    <input type="text" id="login-pmode" placeholder="UPI or Phonepe/PayTM" name="pmode" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
- 
-                    <label for="utid" style="font-family: 'Gotu', sans-serif;"><b> Transaction ID </b></label>
-                    <input type="text" id="login-TID" placeholder="Enter Transaction ID" name="tid" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
- 
-                    <label for="file" style="font-family: 'Gotu', sans-serif;"><b> Upload File </b></label>
-                    <input type="file" id="myFile" name="filename" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br> <br>
- 
-                    <button type="submit" id="fadebtn" style="font-family: 'Gotu', sans-serif; border-radius: 5px;"> Participate </button>
+                </div>  
+              </div>
+            </form>
+          </div>
+
+          <div id="id06" class="modal" style="padding: 20px; display: none; system: height;">
+            <form class="modal-content animate" id="signup">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id06').style.display='none'" class="close" title="Close Modal" style="color: red">&times;</span>
+                <!-- <img src="assets/img/logo.png" alt="Avatar" class="avatar"> -->
+              </div>
+              <div class="container">
+                <div class="text-center">
+                  <div class="row">
+                    <div class="col-md-12" style="background-color: rgba(0, 0, 0, 0.7);">
+                      <img class="logoimage" src="assets/img/logo.png"  style="height: 70px; padding: 15px;"/><br>
+                      <!-- <h3 class="section-subheading text-muted" style="font-family: 'Gotu', sans-serif; color: white; font-weight: 400;"><b> For any query feel free to reach us at : <a href="mailto:askartistroom@gmail.com?"> askartistroom@gmail.com </a></b></h3> -->
+                      <div class="row" id="lows">
+                        <div class="col-md-12 tob">
+                           <h3 id="userdetail" style="font-family: 'Gotu', sans-serif; color: antiquewhite;"></h3>
+                        </div>
+                     </div>
+                      <!-- <h3 class="section-subheading text-muted" style="font-family: 'Gotu', sans-serif; color: white; font-weight: 400;"><b><a class="btn btn-social mx-2" href="https://twitter.com/ArtistRoom2" style="background-color: yellow;"><i class="fab fa-twitter"></i></a><a class="btn btn-social mx-2" href="https://www.instagram.com/artistroom11/" style="background-color: yellow;"><i class="fab fa-instagram"></i></a><a class="btn btn-social mx-2" href="https://t.me/Officialartistroom" style="background-color: yellow;"><i class="fab fa-telegram"></i></a><a class="btn btn-social mx-2" href="https://m.facebook.com/Artist-Room-115761216843685/" style="background-color: yellow;"><i class="fab fa-facebook-f"></i></a><a class="btn btn-social mx-2" href="https://www.linkedin.com/in/artist-room-0976811b0" style="background-color: yellow;"><i class="fab fa-linkedin-in"></i></a></b></h3> -->
+                    </div>
                   </div>
-                </form>
-            </div>
- 
- 
- 
- 
- 
-        <div class="navbar" style="position: fixed; bottom: 0px;">
-            <a href="homepage.html" class="active" title=" Home "><i class="fa fa-home"></i></a>
-            <a href="#"><i class="fa fa-star" title=" My Contests "></i></a>
-            <a href="profile.html"><i class="fa fa-user" title=" Profile "></i></a>
-            <a href="javascript:void(0)" onclick="opendNav()"><i class="fa fa-ellipsis-h" title="More Info"></i></a>
+                </div>  
+              </div>
+            </form>
+          </div>
+
+          <div id="id07" class="modal" style="padding: 20px; display: none; system: height;">
+            <form class="modal-content animate" id="signup">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id07').style.display='none'" class="close" title="Close Modal" style="color: red">&times;</span>
+                <!-- <img src="assets/img/logo.png" alt="Avatar" class="avatar"> -->
+              </div>
+              <div class="container">
+                <div class="text-center">
+                  <div class="row">
+                    <div class="col-md-12" style="background-color: rgba(0, 0, 0, 0.7);">
+                      <img class="logoimage" src="assets/img/logo.png"  style="height: 70px; padding: 15px;"/><br>
+                      <!-- <h3 class="section-subheading text-muted" style="font-family: 'Gotu', sans-serif; color: white; font-weight: 400;"><b> For any query feel free to reach us at : <a href="mailto:askartistroom@gmail.com?"> askartistroom@gmail.com </a></b></h3> -->
+                      <div style="display: inline-block; padding: 25px;">
+                         <h3 style="font-family: 'Gotu', sans-serif; color: antiquewhite;">Invite Friends via <a class="btn btn-social mx-2" href="https://api.whatsapp.com/send?phone=918865862464" style="background-color: yellow;"><i class="fab fa-whatsapp"></i></a></h3>
+                      </div>
+                      <!-- <h3 class="section-subheading text-muted" style="font-family: 'Gotu', sans-serif; color: white; font-weight: 400;"><b><a class="btn btn-social mx-2" href="https://twitter.com/ArtistRoom2" style="background-color: yellow;"><i class="fab fa-twitter"></i></a><a class="btn btn-social mx-2" href="https://www.instagram.com/artistroom11/" style="background-color: yellow;"><i class="fab fa-instagram"></i></a><a class="btn btn-social mx-2" href="https://t.me/Officialartistroom" style="background-color: yellow;"><i class="fab fa-telegram"></i></a><a class="btn btn-social mx-2" href="https://m.facebook.com/Artist-Room-115761216843685/" style="background-color: yellow;"><i class="fab fa-facebook-f"></i></a><a class="btn btn-social mx-2" href="https://www.linkedin.com/in/artist-room-0976811b0" style="background-color: yellow;"><i class="fab fa-linkedin-in"></i></a></b></h3> -->
+                    </div>
+                  </div>
+                </div>  
+              </div>
+            </form>
+          </div>
+
         </div>
- 
- 
-      </div>
       <!-- Bootstrap core JS-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
