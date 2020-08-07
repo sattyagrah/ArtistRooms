@@ -302,7 +302,7 @@
             }
 
             function getData(){
-                db.collection('participants').get().then(function(querySnapshot){
+                db.collection('participants').where('Username', '==', document.querySelector('#names').textContent).get().then(function(querySnapshot){
                   let array = []
                     querySnapshot.forEach(function(doc){
                       
