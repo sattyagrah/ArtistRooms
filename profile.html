@@ -290,26 +290,25 @@
             function forProfile(){
                 db.collection("participants").where('Username', '==', document.querySelector('#names').textContent).get()
                 .then(function(querySnapshot) {
+                  const array =[]
                     querySnapshot.forEach(function(doc) {
-                        const card = template();
-                        card.querySelector(".uploaded-image").setAttribute( "src", doc.data().Uploaded_File );
-                        const parent = document.querySelector('#profiles');
-                        parent.appendChild( card );
+                      const card = template();
+                      card.querySelector(".uploaded-image").setAttribute( "src", doc.data().Uploaded_File );
+                      const parent = document.querySelector('#profiles');
+                      parent.appendChild( card );
+                      array.push(doc.data().Uploaded_File)
                     });
+                  document.querySelector('.posts').innerHTML = array.length
                 }).catch(function(error) {
                     console.log("Error getting documents: ", error);
                 });
             }
 
-            function getDatas(){
-              db.collection('participants').where('Username', '==', document.querySelector('#names').textContent).get().then(function(querySnapshot){
-                const array =[]
+            function getData(){
+              db.collection('participants').get().then(function(querySnapshot){
                   querySnapshot.forEach(function(doc){
-                    console.log(doc.data().Uploaded_File)
-                    array.push(doc.data().Uploaded_File)
+                    console.log(doc.data().Uploaded_File)  
                   })
-                  document.querySelector('.posts').innerHTML = array.length
-                  console.log(array.length)
               })
               // const noOfPosts = document.querySelector('#profiles').querySelectorAll('.card').length
               // document.querySelector('.posts').innerHTML = noOfPosts
