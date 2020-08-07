@@ -301,7 +301,7 @@
                 });
             }
 
-            function getData(){
+            function getDatas(){
               db.collection('participants').where('Username', '==', document.querySelector('#names').textContent).get().then(function(querySnapshot){
                 const array =[]
                   querySnapshot.forEach(function(doc){
