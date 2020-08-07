@@ -302,16 +302,17 @@
             }
 
             function getData(){
-                db.collection('participants').where('Username', '==', document.querySelector('#names').textContent).get().then(function(querySnapshot){
-                  let array = []
-                    querySnapshot.forEach(function(doc){
-                      
-                      array.push(doc.data().Uploaded_File)
-                      console.log(doc.data().Uploaded_File)
-                    })
-                    document.querySelector('.posts').innerHTML = array.length
+              db.collection('participants').get().then(function(querySnapshot){
+                const array =[]
+                  querySnapshot.forEach(function(doc){
+                    console.log(doc.data().Uploaded_File)
+                    array.push(doc.data().Uploaded_File)
+                  })
+                  document.querySelector('.posts').innerHTML = array.length
                   console.log(array.length)
-                })
+              })
+              // const noOfPosts = document.querySelector('#profiles').querySelectorAll('.card').length
+              // document.querySelector('.posts').innerHTML = noOfPosts
             }
 
             const avatar = document.querySelector('.avatar')
