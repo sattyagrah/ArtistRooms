@@ -8,6 +8,7 @@ function initApp(){
             document.querySelector('#auth').style.display = "none";
             document.querySelector('#logout').style.display = "block";
             forProfile();
+            getData();
             profilePicture();
         }else{
             // users([])
