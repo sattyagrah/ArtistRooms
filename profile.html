@@ -20,6 +20,7 @@
         }
         .avatar-p{
             padding-left: 50px;
+            padding-bottom: 15px;
         }
         .col-md-4{
             padding: 20px;
@@ -56,8 +57,22 @@
             <section class="page-section">
                 <div class="container-fluid">
                     <div class="classic-tabs">
-                        <div class="avatar-p">
+                        <div class="row col-md-12">
+                          <div class="avatar-p col-md-3">
                             <img class="avatar">
+                          </div>
+                          <div class="avatar-p col-md-3">
+                            <p style="font-family: 'Gotu', sans-serif;"> Posts </p>
+                            <p class="posts">0</p>
+                          </div>
+                          <div class="avatar-p col-md-3">
+                            <p style="font-family: 'Gotu', sans-serif;"> Follower </p>
+                            <p>0</p>
+                          </div>
+                          <div class="avatar-p col-md-3">
+                            <p style="font-family: 'Gotu', sans-serif;"> Following </p>
+                            <p>0</p>
+                          </div>
                         </div>
                         <!-- <ul class="nav tabs-cyan" id="myClassicTab" role="tablist">
                             <li class="nav-item">
@@ -288,9 +303,14 @@
 
             function getData(){
                 db.collection('participants').get().then(function(querySnapshot){
+                  let array = []
                     querySnapshot.forEach(function(doc){
-                        console.log(doc.data().Uploaded_File)
+                      
+                      array.push(doc.data().Uploaded_File)
+                      console.log(doc.data().Uploaded_File)
                     })
+                    document.querySelector('.posts').innerHTML = array.length
+                  console.log(array.length)
                 })
             }
 
@@ -318,7 +338,6 @@
                     })
                 })
             })
-
             function profilePicture(){
                 db.collection("profile_potos").where('Name', '==', document.querySelector('#names').textContent).get()
                 .then(function(querySnapshot) {
