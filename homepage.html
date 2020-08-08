@@ -16,20 +16,9 @@
           background-color: transparent;
           border-radius: 50%;
           font-size: 34px;
-          color: #808080;
+          color: black;
           outline: none;
-          transition: all 0.5s;
-          width: 52px;
-          height: 52px;
-        }
-        button.likes {
-          padding: 0;
-          background-color: transparent;
-          border-radius: 50%;
-          font-size: 28px;
-          color: #808080;
-          outline: none;
-          transition: all 0.5s;
+          /* transition: all 0.5s; */
           width: 52px;
           height: 52px;
         }
@@ -38,9 +27,9 @@
         }
         .avatar {
           align-content: center;
-          min-width: 50px !important;
-          max-width: 50px !important;
-          height: 50px;
+          min-width: 30px !important;
+          max-width: 30px !important;
+          height: 30px;
           border-radius: 50%;
           border: 1px solid darkslategray;
         }
@@ -74,30 +63,49 @@
         </div>
  
         <div class="main">
-          <section class="page-section" id="upcomingMatches">
+          <section class="page-section" id="upcomingMatches" style="padding-bottom: 50px;">
               <div class="text-center">
                   <h2 class="section-heading text-uppercase" style="font-family: 'Yatra One', cursive;"> My Feeds </h2>         
               </div>
               <div class="container-fluid">
                   <!-- Classic tabs -->
                   <div class="classic-tabs">
-                      <!-- <ul class="nav tabs-cyan" id="myClassicTab" role="tablist">
-                          <li class="nav-item">
-                              <a class="nav-link  waves-light active show" id="profile-tab-classic" data-toggle="tab" href="#profile-classic"
-                              role="tab" aria-controls="profile-classic" aria-selected="true" style="font-family: 'Gotu', sans-serif;"> Photgraphy </a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link waves-light" id="follow-tab-classic" data-toggle="tab" href="#follow-classic" role="tab"
-                              aria-controls="follow-classic" aria-selected="false" style="font-family: 'Gotu', sans-serif;"> Short Video </a>
-                          </li>
-                      </ul> -->
-                      <div class="tab-content border-right border-bottom border-left rounded-bottom" id="myClassicTabContent">
-                          <div class="tab-pane fade active show" id="profile-classic" role="tabpanel" aria-labelledby="profile-tab-classic">
-                              <div class="thumbnails" id="new_posts">
-                                
-                              </div>
+                    <ul class="nav tabs-cyan" id="myClassicTab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link  waves-light active show" id="profile-tab-classic" data-toggle="tab" href="#profile-classic"
+                        role="tab" aria-controls="profile-classic" aria-selected="true" style="font-family: 'Gotu', sans-serif;"> Photos </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link waves-light" id="follow-tab-classic" data-toggle="tab" href="#follow-classic" role="tab"
+                        aria-controls="follow-classic" aria-selected="false" style="font-family: 'Gotu', sans-serif;"> Videos </a>
+                      </li>
+                    </ul>
+                    <div class="tab-content border-right border-bottom border-left rounded-bottom" id="myClassicTabContent">
+                        <div class="tab-pane fade active show" id="profile-classic" role="tabpanel" aria-labelledby="profile-tab-classic">
+                          <div class="thumbnails" id="new_posts">
+
                           </div>
-                      </div>
+                        </div>
+                        <div class="tab-pane fade" id="follow-classic" role="tabpanel" aria-labelledby="follow-tab-classic">
+                          <div class="row thumbnails" id="new_videos">
+
+                            <!-- <div class="card videos col-md-12" style="width: 100%; max-height: 60%; max-width: 700px;">
+                              <div class="" style="padding:10px; text-align: left; width: auto;">
+                                <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"></h5>
+                              </div>
+                              <video controls>
+                                <source src="assets/img/JOKE .mp4" type="video/mp4">
+                              </video>
+                              <div class="card-body row">
+                                  <div style="float: left;">
+                                    <button class="like">&#9829;</button>
+                                  </div>
+                              </div>
+                            </div> -->
+
+                          </div>
+                        </div>
+                    </div>
                   </div>
                   <!-- Classic tabs -->           
               </div>
@@ -328,36 +336,81 @@
         }
  
         function getData(){
-            db.collection("participants").get().then(function(querySnapshot) {
-                querySnapshot.forEach(function(doc) {
-                  const card = template();
-                  card.querySelector(".uploaded-image").setAttribute( "src", doc.data().Uploaded_File );
-                  card.querySelector(".card-text").innerText = doc.data().Username;
-                  card.querySelector( ".like" ).addEventListener("click", ( ev ) => {
-                    ev.preventDefault();
-                    // console.log( ev.target  )
-                    if (ev.target.classList.contains( "liked" ) ) {
-                      ev.target.classList.remove( "liked" );
-                    } else {
-                      ev.target.classList.add( "liked" );
-                    }
-                  });
-                  const parent = document.querySelector('#new_posts');
-                  parent.appendChild( card );
-                });
-            }).catch(function(error) {
-                console.log("Error getting documents: ", error);
+          db.collection("participants").get().then(function(querySnapshot) {
+            querySnapshot.forEach(function(doc) {
+              const card = template();
+              card.querySelector(".uploaded-image").setAttribute( "src", doc.data().Uploaded_File );
+              card.querySelector(".card-text").innerText = doc.data().Username;
+              card.querySelector( ".like" ).addEventListener("click", ( ev ) => {
+                ev.preventDefault();
+                // console.log( ev.target  )
+                if (ev.target.classList.contains( "liked" ) ) {
+                  ev.target.classList.remove( "liked" );
+                } else {
+                  ev.target.classList.add( "liked" );
+                }
+              });
+              const parent = document.querySelector('#new_posts');
+              parent.appendChild( card );
             });
+          }).catch(function(error) {
+            console.log("Error getting documents: ", error);
+          });
         }
+
+        function templatevid() {
+          let li =  `
+          <div class="card videos col-md-12" style="width: 100%; max-height: 60%; max-width: 700px;">
+            <div class="" style="padding:10px; text-align: left; width: auto;">
+              <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"></h5>
+            </div>
+            <video controls>
+              <source class="uploaded-video" type="video/mp4">
+            </video>
+            <div class="card-body row">
+                <div style="float: left;">
+                  <button class="like">&#9829;</button>
+                </div>
+            </div>
+          </div>`;
+
+          const parser = new DOMParser();
+          const list = parser.parseFromString(li, 'text/html').querySelector(".videos");
+          return list;
+        }
+ 
+        function getDataVideo(){
+          db.collection("participants_video").get().then(function(querySnapshot) {
+            querySnapshot.forEach(function(doc) {
+              const card = templatevid();
+              card.querySelector(".uploaded-video").setAttribute( "src", doc.data().Uploaded_Video );
+              card.querySelector(".card-text").innerText = doc.data().Username;
+              card.querySelector( ".like" ).addEventListener("click", ( ev ) => {
+                ev.preventDefault();
+                // console.log( ev.target  )
+                if (ev.target.classList.contains( "liked" ) ) {
+                  ev.target.classList.remove( "liked" );
+                } else {
+                  ev.target.classList.add( "liked" );
+                }
+              });
+              const parent = document.querySelector('#new_videos');
+              parent.appendChild( card );
+            });
+          }).catch(function(error) {
+            console.log("Error getting documents: ", error);
+          });
+        }
+
         function forProfile(){
           console.log('')
         }
 
         function profilePicture(){
-          db.collection("profile_potos").where('Name', '==', document.querySelector('#names').textContent).get()
+          db.collection("profile_potos").get()
           .then(function(querySnapshot) {
               querySnapshot.forEach(function(doc) {
-                  document.querySelector(".avatar").setAttribute( "src", doc.data().Profile_photo );
+                console.log('data Fetched')
               });
           }).catch(function(error) {
               console.log("Error getting documents: ", error);

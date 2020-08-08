@@ -288,10 +288,10 @@ span.psw {
 }
 
 #upcomingMatches{
-  padding-top: 50px;
-	padding-bottom: 50px;
-	padding-left: 50px;
-  padding-right: 50px;
+  padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+  padding-right: 10px;
   background-color: #efeff4;
 }
 #upcomingMatches h2{
@@ -320,10 +320,10 @@ span.psw {
 }
 
 #ongoingMatches{
-  padding-top: 50px;
-	padding-bottom: 50px;
-	padding-left: 50px;
-  padding-right: 50px;
+  padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+  padding-right: 10px;
   background-color: #efeff4;
 }
 #ongoingMatches h2{
@@ -352,10 +352,10 @@ span.psw {
 }
 
 #homepage{
-  padding-top: 50px;
-	padding-bottom: 50px;
-	padding-left: 50px;
-  padding-right: 50px;
+  padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+  padding-right: 10px;
   background-color: #efeff4;
 }
 #homepage h2{
@@ -387,10 +387,10 @@ span.psw {
   cursor: pointer;
 }
 #previousMatches{
-  padding-top: 50px;
-	padding-bottom: 50px;
-	padding-left: 50px;
-  padding-right: 50px;
+  padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+  padding-right: 10px;
   background-color: #efeff4;
 }
 #previousMatches h2{

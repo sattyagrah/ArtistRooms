@@ -35,7 +35,7 @@
             <a class="nav-link js-scroll-trigger" onclick="document.querySelector('#id04').style.display = 'block'" style="width:auto; font-family: 'Gotu', sans-serif; cursor: pointer;"> Contact Us </a>
         </div>
 
-        <section class="page-section" id="ongoingMatches">
+        <section class="page-section" id="ongoingMatches" style="padding-bottom: 50px;">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase" style="font-family: 'Yatra One', cursive;"> Live </h2>         
             </div>
@@ -101,37 +101,37 @@
                         <div class="tab-pane fade" id="follow-classic" role="tabpanel" aria-labelledby="follow-tab-classic">
                             <div class="row thumbnails">
                                 <div class="card col-md-4" style="width: 18rem; height: 60%;">
-                                    <img id="imgs" class="card-img-top" src="assets/img/about/short_video.jpg" alt="Card image cap">
+                                    <img id="ived" class="card-img-top" src="assets/img/about/short_video.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h5 class="card-text" style="font-family: 'Gotu', sans-serif;" id="dates"> Contest Date: 13 Aug 2020 </h5>
                                     </div>
                                 </div>
                                 <div class="card col-md-4" style="width: 18rem; height: 60%;">
-                                    <img id="imgs" class="card-img-top" src="assets/img/about/short_video.jpg" alt="Card image cap">
+                                    <img id="ived" class="card-img-top" src="assets/img/about/short_video.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"> Contest Date: 15 Aug 2020 </h5>
                                     </div>
                                 </div>
                                 <div class="card col-md-4" style="width: 18rem; height: 60%;">
-                                    <img id="imgs" class="card-img-top" src="assets/img/about/short_video.jpg" alt="Card image cap">
+                                    <img id="ived" class="card-img-top" src="assets/img/about/short_video.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"> Contest Date: 17 Aug 2020 </h5>
                                     </div>
                                 </div>
                                 <div class="card col-md-4" style="width: 18rem; height: 60%;">
-                                    <img id="imgs" class="card-img-top" src="assets/img/about/short_video.jpg" alt="Card image cap">
+                                    <img id="ived" class="card-img-top" src="assets/img/about/short_video.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"> Contest Date: 19 Aug 2020 </h5>
                                     </div>
                                 </div>
                                 <div class="card col-md-4" style="width: 18rem; height: 60%;">
-                                    <img id="imgs" class="card-img-top" src="assets/img/about/short_video.jpg" alt="Card image cap">
+                                    <img id="ived" class="card-img-top" src="assets/img/about/short_video.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"> Contest Date: 21 Aug 2020 </h5>
                                     </div>
                                 </div>
                                 <div class="card col-md-4" style="width: 18rem; height: 60%;">
-                                    <img id="imgs" class="card-img-top" src="assets/img/about/short_video.jpg" alt="Card image cap">
+                                    <img id="ived" class="card-img-top" src="assets/img/about/short_video.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"> Contest Date: 23 Aug 2020 </h5>
                                     </div>
@@ -211,6 +211,50 @@
               </div>
             </form>
         </div>
+
+        <div id="participationformsVideos" class="modal" style="overflow: scroll; padding: 20px;">
+          <form class="modal-content animate" id="signinVideo">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('participationformsVideos').style.display='none';" class="close" title="Close participation form">&times;</span>
+              <!-- <img src="assets/img/logo.png" alt="Avatar" class="avatar"> -->
+            </div>
+            
+            <div class="container">
+              <label for="instruction" style="font-family: 'Yatra One', cursive;"><b> General Instructions : </b></label><br>
+                <label for="instruction" style="font-family: 'Gotu', sans-serif;"> 1). The participation fee for this contest is ₹ 5000.</label>
+                <label for="instruction" style="font-family: 'Gotu', sans-serif;">2). First you need to submit the fee. Only then you can participate.</label>
+                <label for="instruction" style="font-family: 'Gotu', sans-serif;">3). UPI : <b>9102842523@ybl</b> or PayTM/Google Pay/PhonePe : <b>9102842523</b></label>
+            </div>
+            
+            <div class="container">
+              <label for="uname" style="font-family: 'Gotu', sans-serif;"><b> Name </b></label>
+              <input type="text" id="login-email" placeholder="Enter Name" name="name" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
+
+              <!-- <label for="uname" style="font-family: 'Gotu', sans-serif;"><b> Username </b></label>
+              <input type="text" id="login-userName" placeholder="Enter Name" name="userName" required style="font-family: 'Gotu', sans-serif; border-radius: 5px; user-select: none;"><br> -->
+
+              <label for="uphone" style="font-family: 'Gotu', sans-serif;"><b> Phone </b></label>
+              <input type="text" id="login-phone" placeholder="Enter Phone Number" name="phone" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
+
+              <label for="utheme" style="font-family: 'Gotu', sans-serif;"><b> Theme </b></label>
+              <input type="text" id="login-theme" placeholder="Enter Contest theme" name="theme" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
+
+              <label for="udate" style="font-family: 'Gotu', sans-serif;"><b> Date </b></label>
+              <input type="text" id="login-date" placeholder="Enter contest date" name="date" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
+
+              <label for="upmode" style="font-family: 'Gotu', sans-serif;"><b> Payment Mode </b></label>
+              <input type="text" id="login-pmode" placeholder="UPI or Phonepe/PayTM" name="pmode" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
+        
+              <label for="utid" style="font-family: 'Gotu', sans-serif;"><b> Transaction ID </b></label>
+              <input type="text" id="login-TID" placeholder="Enter Transaction ID" name="tid" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
+
+              <label for="file" style="font-family: 'Gotu', sans-serif;"><b> Upload Video </b></label>
+              <input type="file" id="myFilevideo" name="filename" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br> <br>
+                
+              <button type="submit" id="fadebtn" style="font-family: 'Gotu', sans-serif; border-radius: 5px;"> Participate </button>
+            </div>
+          </form>
+      </div>
 
         <div class="navbar" style="position: fixed; bottom: 0px;">
             <a href="homepage.html" class="active" title=" Home "><i class="fa fa-home"></i></a>

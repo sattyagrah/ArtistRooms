@@ -9,6 +9,8 @@ function initApp(){
             document.querySelector('#logout').style.display = "block";
             forProfile();
             profilePicture();
+            forProfilevid();
+            // posts();
         }else{
             // users([])
             console.log('User Logged Out!! ')
@@ -19,6 +21,7 @@ function initApp(){
 window.onload = function() {
     initApp();
     getData();
+    getDataVideo();
     db.collection('participants').get().then((snapshot) => {
         // setUp(snapshot.docs)
         snapshot.docs.forEach(doc => {
@@ -57,6 +60,36 @@ form.addEventListener('submit', (e) => {
     console.log(files.name)
 })
 
+const formvid = document.querySelector('#signinVideo')
+formvid.addEventListener('submit', (e) => {
+    e.preventDefault()
+    document.querySelector('#participationformsVideos').style.display = "none"
+    const uploadedfilesvid = document.querySelector('#myFilevideo');
+    let files = uploadedfilesvid.files[0]
+    let storagerefvid = storage.ref('Videos/' + files.name)
+    storagerefvid.put(files)
+    storagerefvid.put(files).then( snapshot => {
+        snapshot.ref.getDownloadURL().then(function(url){
+            let videoRes = url
+            db.collection('participants_video').add({
+                Name : formvid.name.value,
+                // Username : document.querySelector('#names').textContent,
+                Phone_Number : formvid.phone.value,
+                Theme : formvid.theme.value,
+                Date : formvid.date.value,
+                Payment_Mode : formvid.pmode.value,
+                Transaction_ID : formvid.tid.value,
+                Username : document.querySelector('#names').textContent,
+                Uploaded_Video : videoRes,
+            })
+            // console.log(db.collection("participants").orderBy("Username", "asc"))
+            console.log(videoRes)
+        })
+    })
+    console.log(files)
+    console.log(files.name)
+})
+
 const logout = document.querySelector('#logout');
 logout.addEventListener('click', (e) => {
     e.preventDefault();
@@ -77,6 +110,15 @@ ongoingmatches.forEach(ele => {
     })
 });
 
+const ongoingmatchesVideos = document.querySelectorAll('#ived');
+console.log(ongoingmatchesVideos)
+ongoingmatchesVideos.forEach(ele => {
+    ele.addEventListener('click', (e) => {
+        e.preventDefault()
+        document.querySelector('#participationformsVideos').style.display = 'block';
+    })
+});
+
 const upcomingNotice = document.querySelectorAll('#uimgs');
 console.log(upcomingNotice)
 upcomingNotice.forEach(ele => {
@@ -93,5 +135,3 @@ previousInfo.forEach(ele => {
         document.querySelector('#previousnotice').style.display = 'block';
     })
 })
-
-

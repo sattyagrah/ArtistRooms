@@ -11,21 +11,22 @@
       <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
       <style>
-          .avatar {
-            align-content: center;
-            max-width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            border: 3px solid darkslategray;
+        .avatar {
+          align-content: center;
+          min-width: 70px;
+          max-width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          border: 3px solid darkslategray;
         }
         .avatar-p{
-            padding-left: 50px;
-            padding-bottom: 15px;
+          padding-left: 50px;
+          padding-bottom: 15px;
         }
         .col-md-4{
-            padding: 20px;
-            background: none;
-            border: none;
+          padding: 20px;
+          background: none;
+          border: none;
         }
       </style>
    </head>
@@ -54,7 +55,7 @@
         </div>
         
         <div class="main">
-            <section class="page-section">
+            <section class="page-section" style="padding-bottom: 50px;">
                 <div class="container-fluid">
                     <div class="classic-tabs">
                         <div class="row col-md-12">
@@ -63,7 +64,18 @@
                           </div>
                           <div class="avatar-p col-md-3">
                             <p style="font-family: 'Gotu', sans-serif;"> Posts </p>
-                            <p class="posts">0</p>
+                            <p>
+                              <table>
+                                <tr style="padding: 10px;" >
+                                  <th style="font-family: 'Gotu', sans-serif;" style="padding: 5px;">P</th>
+                                  <th style="font-family: 'Gotu', sans-serif;">V</th>
+                                </tr>
+                                <tr style="padding: 10px;">
+                                  <td style="font-family: 'Gotu', sans-serif;" class="posts">0</td>
+                                  <td style="font-family: 'Gotu', sans-serif;" class="posts_v">0</td>
+                                </tr>
+                              </table>
+                            </p>
                           </div>
                           <div class="avatar-p col-md-3">
                             <p style="font-family: 'Gotu', sans-serif;"> Follower </p>
@@ -74,7 +86,7 @@
                             <p>0</p>
                           </div>
                         </div>
-                        <!-- <ul class="nav tabs-cyan" id="myClassicTab" role="tablist">
+                        <ul class="nav tabs-cyan" id="myClassicTab" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link  waves-light active show" id="profile-tab-classic" data-toggle="tab" href="#profile-classic"
                                 role="tab" aria-controls="profile-classic" aria-selected="true" style="font-family: 'Gotu', sans-serif;"> Photgraphy </a>
@@ -83,12 +95,32 @@
                                 <a class="nav-link waves-light" id="follow-tab-classic" data-toggle="tab" href="#follow-classic" role="tab"
                                 aria-controls="follow-classic" aria-selected="false" style="font-family: 'Gotu', sans-serif;"> Short Video </a>
                             </li>
-                        </ul> -->
+                        </ul>
                         <div class="tab-content border-right border-bottom border-left rounded-bottom" id="myClassicTabContent">
-                            <div class="tab-pane fade active show" id="profile-classic" role="tabpanel" aria-labelledby="profile-tab-classic">
-                                <div class="row thumbnails" id="profiles" style="padding: 20px;">
-                                </div>
+                          <div class="tab-pane fade active show" id="profile-classic" role="tabpanel" aria-labelledby="profile-tab-classic">
+                            <div class="row thumbnails" id="profiles" style="padding: 20px;">
                             </div>
+                          </div>
+
+                          <div class="tab-pane fade" id="follow-classic" role="tabpanel" aria-labelledby="follow-tab-classic">
+                            <div class="row thumbnails" id="profiles_videos">
+  
+                              <!-- <div class="card videos col-md-12" style="width: 100%; max-height: 60%; max-width: 700px;">
+                                <div class="" style="padding:10px; text-align: left; width: auto;">
+                                  <h5 class="card-text" style="font-family: 'Gotu', sans-serif;"></h5>
+                                </div>
+                                <video controls>
+                                  <source src="assets/img/JOKE .mp4" type="video/mp4">
+                                </video>
+                                <div class="card-body row">
+                                    <div style="float: left;">
+                                      <button class="like">&#9829;</button>
+                                    </div>
+                                </div>
+                              </div> -->
+  
+                            </div>
+                          </div>
                         </div>
                     </div>        
                 </div>
@@ -288,20 +320,50 @@
             }
     
             function forProfile(){
-                db.collection("participants").where('Username', '==', document.querySelector('#names').textContent).get()
-                .then(function(querySnapshot) {
-                  const array =[]
-                    querySnapshot.forEach(function(doc) {
-                      const card = template();
-                      card.querySelector(".uploaded-image").setAttribute( "src", doc.data().Uploaded_File );
-                      const parent = document.querySelector('#profiles');
-                      parent.appendChild( card );
-                      array.push(doc.data().Uploaded_File)
-                    });
-                  document.querySelector('.posts').innerHTML = array.length
-                }).catch(function(error) {
-                    console.log("Error getting documents: ", error);
-                });
+              db.collection("participants").where('Username', '==', document.querySelector('#names').textContent).get()
+              .then(function(querySnapshot) {
+                const array = []
+                  querySnapshot.forEach(function(doc) {
+                    const card = template();
+                    card.querySelector(".uploaded-image").setAttribute( "src", doc.data().Uploaded_File );
+                    const parent = document.querySelector('#profiles');
+                    parent.appendChild( card );
+                    array.push(doc.data().Uploaded_File)
+                  });
+                document.querySelector('.posts').innerHTML = array.length
+              }).catch(function(error) {
+                  console.log("Error getting documents: ", error);
+              });
+            }
+
+            function templatevid() {
+              let li =  `
+              <div class="card videos col-md-12" style="width: 100%; max-height: 60%; max-width: 700px;">
+                <video controls>
+                  <source class="uploaded-video" type="video/mp4">
+                </video>
+              </div>`;
+  
+              const parser = new DOMParser();
+              const list = parser.parseFromString(li, 'text/html').querySelector(".videos");
+              return list;
+            }
+    
+            function forProfilevid(){
+              db.collection("participants_video").where('Username', '==', document.querySelector('#names').textContent).get()
+              .then(function(querySnapshot) {
+                const array_vid = []
+                  querySnapshot.forEach(function(doc) {
+                    const card = templatevid();
+                    card.querySelector(".uploaded-video").setAttribute( "src", doc.data().Uploaded_Video );
+                    const parent = document.querySelector('#profiles_videos');
+                    parent.appendChild( card );
+                    array_vid.push(doc.data().Uploaded_Video)
+                  });
+                document.querySelector('.posts_v').innerHTML = array_vid.length
+              }).catch(function(error) {
+                  console.log("Error getting documents: ", error);
+              });
             }
 
             function getData(){
