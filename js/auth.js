@@ -10,7 +10,7 @@ function initApp(){
     });
 }
 window.onload = function() {
-    initApp();
+    // initApp();
   };
 
 const signupform = document.querySelector('#signup');

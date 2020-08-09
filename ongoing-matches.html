@@ -190,13 +190,13 @@
                 <input type="text" id="login-userName" placeholder="Enter Name" name="userName" required style="font-family: 'Gotu', sans-serif; border-radius: 5px; user-select: none;"><br> -->
 
                 <label for="uphone" style="font-family: 'Gotu', sans-serif;"><b> Phone </b></label>
-                <input type="text" id="login-phone" placeholder="Enter Phone Number" name="phone" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
+                <input type="tel" id="login-phone" placeholder="Enter Phone Number" name="phone" required style="font-family: 'Gotu', sans-serif; border-radius: 5px; width: 100%;"><br>
 
                 <label for="utheme" style="font-family: 'Gotu', sans-serif;"><b> Theme </b></label>
                 <input type="text" id="login-theme" placeholder="Enter Contest theme" name="theme" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
 
                 <label for="udate" style="font-family: 'Gotu', sans-serif;"><b> Date </b></label>
-                <input type="text" id="login-date" placeholder="Enter contest date" name="date" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
+                <input type="date" id="login-date" name="date" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
 
                 <label for="upmode" style="font-family: 'Gotu', sans-serif;"><b> Payment Mode </b></label>
                 <input type="text" id="login-pmode" placeholder="UPI or Phonepe/PayTM" name="pmode" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
@@ -234,13 +234,13 @@
               <input type="text" id="login-userName" placeholder="Enter Name" name="userName" required style="font-family: 'Gotu', sans-serif; border-radius: 5px; user-select: none;"><br> -->
 
               <label for="uphone" style="font-family: 'Gotu', sans-serif;"><b> Phone </b></label>
-              <input type="text" id="login-phone" placeholder="Enter Phone Number" name="phone" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
+              <input type="tel" id="login-phone" placeholder="Enter Phone Number" name="phone" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
 
               <label for="utheme" style="font-family: 'Gotu', sans-serif;"><b> Theme </b></label>
               <input type="text" id="login-theme" placeholder="Enter Contest theme" name="theme" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
 
               <label for="udate" style="font-family: 'Gotu', sans-serif;"><b> Date </b></label>
-              <input type="text" id="login-date" placeholder="Enter contest date" name="date" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
+              <input type="date" id="login-date" name="date" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
 
               <label for="upmode" style="font-family: 'Gotu', sans-serif;"><b> Payment Mode </b></label>
               <input type="text" id="login-pmode" placeholder="UPI or Phonepe/PayTM" name="pmode" required style="font-family: 'Gotu', sans-serif; border-radius: 5px;"><br>
@@ -254,7 +254,7 @@
               <button type="submit" id="fadebtn" style="font-family: 'Gotu', sans-serif; border-radius: 5px;"> Participate </button>
             </div>
           </form>
-      </div>
+        </div>
 
         <div class="navbar" style="position: fixed; bottom: 0px;">
             <a href="homepage.html" class="active" title=" Home "><i class="fa fa-home"></i></a>
@@ -419,6 +419,22 @@
          // console.log(auth)
          const db = firebase.firestore();
          const storage = firebase.storage();
+
+          function getData(){
+            console.log('')
+          }
+          function getDataVideo(){
+            console.log("")
+          }
+          function forProfile(){
+            console.log('')
+          }
+          function profilePicture(){
+            console.log('')
+          }
+          function forProfilevid(){
+            console.log('')
+          }
       </script>
    </body>
 </html>

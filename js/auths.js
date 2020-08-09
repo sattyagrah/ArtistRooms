@@ -17,7 +17,7 @@ function initApp(){
         }
     });
 }
-
+document.querySelector('#logout').style.color = "red";
 window.onload = function() {
     initApp();
     getData();
@@ -51,10 +51,16 @@ form.addEventListener('submit', (e) => {
                 Transaction_ID : form.tid.value,
                 Username : document.querySelector('#names').textContent,
                 Uploaded_File : imageRes,
+            }).catch(err => {
+                console.log("Error Message: ", err)
             })
             // console.log(db.collection("participants").orderBy("Username", "asc"))
             console.log(imageRes)
+        }).catch(err => {
+            console.log("Error Message: ", err)
         })
+    }).catch(err => {
+        console.log("Error Message: ", err)
     })
     console.log(files)
     console.log(files.name)
@@ -81,10 +87,16 @@ formvid.addEventListener('submit', (e) => {
                 Transaction_ID : formvid.tid.value,
                 Username : document.querySelector('#names').textContent,
                 Uploaded_Video : videoRes,
+            }).catch(err => {
+                console.log("Error Message: ", err)
             })
             // console.log(db.collection("participants").orderBy("Username", "asc"))
             console.log(videoRes)
+        }).catch(err => {
+            console.log("Error Message: ", err)
         })
+    }).catch(err => {
+        console.log("Error Message: ", err)
     })
     console.log(files)
     console.log(files.name)

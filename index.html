@@ -176,15 +176,15 @@
 
                      <div class="">
                         <div class="load_more_button">
-                           <a target="_top" href="" style="font-family: 'Gotu', sans-serif;">MORE MATCHES</a>
+                           <a onclick="document.querySelector('#id01').style.display = 'block'" style="font-family: 'Gotu', sans-serif;">MORE MATCHES</a>
                         </div>
                      </div>
                      <div class="row">
                         <div class="col-md-6 load_more_button" style="align-items: flex-start;">
-                           <a target="_top" href="" style="font-family: 'Gotu', sans-serif;"> Daily Contests </a>
+                           <a onclick="document.querySelector('#id01').style.display = 'block'" style="font-family: 'Gotu', sans-serif;"> Daily Contests </a>
                         </div>
                         <div class="col-md-6 load_more_button" style="align-items: flex-end;">
-                           <a target="_top" href="" style="font-family: 'Gotu', sans-serif;"> Multiple Contests </a>
+                           <a onclick="document.querySelector('#id01').style.display = 'block'" style="font-family: 'Gotu', sans-serif;"> Multiple Contests </a>
                         </div>
                      </div>
                </div>
@@ -255,7 +255,11 @@
       </div>
 
       <div id="id03" class="modal" style="padding: 20px;">
-         <form class="modal-content animate" id="forgot">       
+         <form class="modal-content animate" id="forgot"> 
+            <div class="imgcontainer">
+               <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+               <!-- <img src="assets/img/logo.png" alt="Avatar" class="avatar"> -->
+             </div>      
            <div class="container">
              <label for="uname" style="font-family: 'Gotu', sans-serif;"><b>Username</b></label>
              <input type="text" id="forgot-email" placeholder="Enter Username" name="uname" required style="font-family: 'Gotu', sans-serif;">
